@@ -1,0 +1,2262 @@
+OMP_NUM_THREADS is 2
+    Configfile       : dimr.xml
+    D3D_HOME         : /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/..
+    PROC_DEF_DIR     : /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/../share/delft3d
+    Working directory: /p/1230882-emodnet_hrsm/fromAmey/Regional_canada_model/model_runs/trial_run_allboundary
+    Number of slots  : 8
+    Docker parallel  : 0
+    mpiexec is /opt/apps/mpich/3.3.2_intel18.0.3/bin/mpiexec
+
+Contents of machinefile:
+p-mcs198.directory.intra:1
+p-mcs010.directory.intra:1
+p-mcs198.directory.intra:1
+p-mcs010.directory.intra:1
+p-mcs198.directory.intra:1
+p-mcs010.directory.intra:1
+p-mcs198.directory.intra:1
+p-mcs010.directory.intra:1
+----------------------------------------------------------------------
+executing:
+mpiexec -np 8 /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/../bin/dimr dimr.xml 
+#4: Running parallel with 8 partitions
+Dimr [2021-06-29 19:48:29.644696] #4 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#5: Running parallel with 8 partitions
+Dimr [2021-06-29 19:48:29.644980] #5 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#0: Running parallel with 8 partitions
+#2: Running parallel with 8 partitions
+#6: Running parallel with 8 partitions
+#7: Running parallel with 8 partitions
+Dimr [2021-06-29 19:48:29.645069] #0 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-29 19:48:29.645083] #2 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-29 19:48:29.645244] #7 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-29 19:48:29.645118] #6 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#3: Running parallel with 8 partitions
+#1: Running parallel with 8 partitions
+Dimr [2021-06-29 19:48:29.645761] #3 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-29 19:48:29.645827] #1 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-29 19:48:29.646594] #0 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.646605] #6 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.646640] #4 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.646651] #2 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.647037] #5 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.647038] #7 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.647156] #1 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.647156] #3 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-29 19:48:29.746586] #0 >> 
+Dimr [2021-06-29 19:48:29.746632] #0 >> Version Information of Components
+Dimr [2021-06-29 19:48:29.746645] #0 >> =================================
+Dimr [2021-06-29 19:48:29.746647] #2 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.746669] #4 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.746762] #6 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.751800] #0 >> dflowfm                            : 1.2.120.68758
+Dimr [2021-06-29 19:48:29.751815] #0 >> ---------------------------------
+Dimr [2021-06-29 19:48:29.751821] #0 >> 
+Dimr [2021-06-29 19:48:29.751851] #0 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.773722] #3 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.773722] #7 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.773791] #1 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-29 19:48:29.773800] #5 >> myNameDFlowFM.Initialize(canada_model.mdu)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+ loading model
+ loading model
+ loading model
+ loading model
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+ loading model
+ loading model
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+ loading model
+ loading model
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : no partitioning polygons file: read subdomain numbering from netfiles
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Opened file : world.ldb
+** INFO   : Closed file : world.ldb
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+ model loaded
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : world.ldb
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+** INFO   : Closed file : world.ldb
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+** INFO   : Opened file : model10km_5e-2_obs.xyn
+ model loaded
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+** INFO   : Closed file : model10km_5e-2_obs.xyn
+ model loaded
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+ Initializing flow: flow_modelinit
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : Initializing flow model geometry...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : removing dry cells...
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Opened file : illegalcells_1p25eu.pol
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : fixing global polygon...
+** INFO   : fixing global polygon...
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : fixing global polygon...
+** INFO   : fixing global polygon...
+** INFO   : fixing global polygon...
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : fixing global polygon...
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : fixing global polygon...
+** INFO   : Closed file : illegalcells_1p25eu.pol
+** INFO   : fixing global polygon...
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   :   done
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   :   done
+** INFO   :   done
+** INFO   :   done
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   :   done
+** INFO   : done
+** INFO   :   splitting polygons...
+** INFO   :   done
+** INFO   :   done
+** INFO   :   done
+** INFO   : done in      0.44700 sec.
+** INFO   : done in      0.45300 sec.
+** INFO   : done in      0.45900 sec.
+** INFO   : done in      0.46000 sec.
+** INFO   : done in      0.46200 sec.
+** INFO   : done in      0.46500 sec.
+** INFO   : done in      0.46500 sec.
+** INFO   : done in      0.48400 sec.
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : Opened file : forcing.ext
+** INFO   : disabled 631 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.13200    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : disabled 338 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.15200    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : disabled 206 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.16600    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : disabled 182 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.21300    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : disabled 317 boundary links
+** INFO   : disabled 203 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.21000    s.
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.19600    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : disabled 189 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.25600    s.
+** INFO   : disabled 254 boundary links
+** INFO   : partition_reduce_mirrorcells, elapsed time:     0.22600    s.
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Opened file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : Closed file : boundary10km_5e-2.pli
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : Start partitioning model...
+** INFO   : Start partitioning model...
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 197 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli     197 nr of open bndcells
+** INFO   : added node-based ghostcells:             85
+** INFO   : added node-based ghostcells:             43
+** INFO   : Start partitioning model...
+** INFO   : boundary: 'boundary10km_5e-2.pli' opened 0 cells.
+** INFO   : waterlevelbnd boundary10km_5e-2.pli       0 nr of open bndcells
+** INFO   : Start partitioning model...
+** INFO   : added node-based ghostcells:             19
+** INFO   : added node-based ghostcells:             26
+** INFO   : Start partitioning model...
+** INFO   : Start partitioning model...
+** INFO   : Start partitioning model...
+** INFO   : added node-based ghostcells:             25
+** INFO   : Start partitioning model...
+** INFO   : added node-based ghostcells:             86
+** INFO   : added node-based ghostcells:             45
+** INFO   : added node-based ghostcells:             91
+** INFO   : added node-based ghostcells:             27
+** INFO   : added node-based ghostcells:             61
+** INFO   : added node-based ghostcells:            111
+** INFO   : added node-based ghostcells:            105
+** INFO   : added node-based ghostcells:             43
+** INFO   : added node-based ghostcells:            132
+** INFO   : added node-based ghostcells:            117
+** INFO   : added node-based ghostcells:            159
+** INFO   : added node-based ghostcells:             66
+** INFO   : added node-based ghostcells:            104
+** INFO   : added node-based ghostcells:             33
+** INFO   : added node-based ghostcells:             26
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:             58
+** INFO   : added node-based ghostcells:            101
+** INFO   : added node-based ghostcells:             25
+** INFO   : added node-based ghostcells:             80
+** INFO   : added node-based ghostcells:             67
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:            131
+** INFO   : added node-based ghostcells:             83
+** INFO   : added node-based ghostcells:            150
+** INFO   : added node-based ghostcells:             27
+** INFO   : added node-based ghostcells:             61
+** INFO   : added node-based ghostcells:            111
+** INFO   : added node-based ghostcells:            105
+** INFO   : added node-based ghostcells:             43
+** INFO   : added node-based ghostcells:            132
+** INFO   : added node-based ghostcells:            117
+** INFO   : added node-based ghostcells:            159
+** INFO   : added node-based ghostcells:             66
+** INFO   : added node-based ghostcells:             17
+** INFO   : added node-based ghostcells:              4
+** INFO   : added node-based ghostcells:            104
+** INFO   : added node-based ghostcells:             33
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:             35
+** INFO   : added node-based ghostcells:             26
+** INFO   : added node-based ghostcells:            101
+** INFO   : added node-based ghostcells:             17
+** INFO   : added node-based ghostcells:              4
+** INFO   : added node-based ghostcells:             80
+** INFO   : added node-based ghostcells:            131
+** INFO   : added node-based ghostcells:             58
+** INFO   : added node-based ghostcells:             25
+** INFO   : added node-based ghostcells:             67
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:             27
+** INFO   : added node-based ghostcells:             83
+** INFO   : added node-based ghostcells:            150
+** INFO   : added node-based ghostcells:             27
+** INFO   : added node-based ghostcells:             61
+** INFO   : added node-based ghostcells:            111
+** INFO   : added node-based ghostcells:            105
+** INFO   : added node-based ghostcells:             43
+** INFO   : added node-based ghostcells:            132
+** INFO   : added node-based ghostcells:            117
+** INFO   : added node-based ghostcells:            159
+** INFO   : added node-based ghostcells:             66
+** INFO   : added node-based ghostcells:              4
+** INFO   : added node-based ghostcells:             17
+** INFO   : added node-based ghostcells:            104
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:             33
+** INFO   : added node-based ghostcells:             35
+** INFO   : added node-based ghostcells:            101
+** INFO   : added node-based ghostcells:             26
+** INFO   : added node-based ghostcells:             17
+** INFO   : added node-based ghostcells:              4
+** INFO   : added node-based ghostcells:             80
+** INFO   : added node-based ghostcells:            131
+** INFO   : added node-based ghostcells:             58
+** INFO   : added node-based ghostcells:             27
+** INFO   : added node-based ghostcells:             67
+** INFO   : added node-based ghostcells:             25
+** INFO   : added node-based ghostcells:             98
+** INFO   : added node-based ghostcells:             83
+** INFO   : added node-based ghostcells:            150
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              1
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : Done partitioning model.
+** INFO   : partition_fixorientation_ghostlist: number of reversed flowlinks=              0
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : Done partitioning model.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Using bedlevel as specified in net-file.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : setbedlevelfromextfile: Setting both 1D and 2D bedlevel from file 'depthcorrection_110_new.xyz'.
+** INFO   : Opened file : depthcorrection_110_new.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : depthcorrection_110_new.xyz
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Done initializing flow model geometry.
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : done in      0.02000 sec.
+** INFO   : done in      0.02000 sec.
+** INFO   : done in      0.02100 sec.
+** INFO   : done in      0.02200 sec.
+** INFO   : done in      0.02200 sec.
+** INFO   : done in      0.02100 sec.
+** INFO   : done in      0.02200 sec.
+** INFO   : done in      0.02100 sec.
+** INFO   : Start initializing external forcings...
+** INFO   : Start initializing external forcings...
+** INFO   : Start initializing external forcings...
+** INFO   : Start initializing external forcings...
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Start initializing external forcings...
+** INFO   : Start initializing external forcings...
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Start initializing external forcings...
+** INFO   : Start initializing external forcings...
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc'.
+** INFO   : Opened file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : Closed file : itfrictioncoeff_1_dmin500_gebco_January_withoutNaN_BVnew.asc
+** INFO   : merged 0 samples in .02 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .02 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : Closed file : forcing.ext
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'internaltidesfrictioncoefficient' from file 'allcells.pol'.
+** INFO   : Opened file : allcells.pol
+** INFO   : Closed file : allcells.pol
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : External Forcing or Initialising 'bedlevel' from file 'depthcorrection_110_new.xyz'.
+** INFO   : External Forcing or Initialising 'frictioncoefficient' from file 'friction_correction_19.xyz'.
+** INFO   : Opened file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : merged 0 samples in .01 seconds.
+** INFO   : Closed file : friction_correction_19.xyz
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Closed file : forcing.ext
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : Done initializing external forcings.
+** INFO   : nogauss , nocg :          19530         18184
+** INFO   : nogauss , nocg :          22308         15043
+** INFO   : nogauss , nocg :          20364         18220
+** INFO   : nogauss , nocg :          20788         16410
+** INFO   : nogauss , nocg :          21060         16594
+** INFO   : nogauss , nocg :          21263         15887
+** INFO   : nogauss , nocg :          21033         16120
+** INFO   : nogauss , nocg :          23536         13831
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : Finding flow nodes...
+** INFO   : done in      0.02000 sec.
+** INFO   : done in      0.02000 sec.
+** INFO   : done in      0.03800 sec.
+** INFO   : done in      0.03700 sec.
+** INFO   : done in      0.03900 sec.
+** INFO   : done in      0.03800 sec.
+** INFO   : done in      0.03800 sec.
+** INFO   : done in      0.03900 sec.
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    37281
+** INFO   : nr of netlinks         ( )  :                    74447
+** INFO   : nr of flownodes        ( )  :                    37150
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    69382
+** INFO   : nr of internal links   ( )  :                    69382
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     5065
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.4052989934E+12
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    35991
+** INFO   : nr of netlinks         ( )  :                    73202
+** INFO   : nr of flownodes        ( )  :                    37198
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    69671
+** INFO   : nr of internal links   ( )  :                    69671
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     3531
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.8476480615E+12
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    36817
+** INFO   : nr of netlinks         ( )  :                    74530
+** INFO   : nr of flownodes        ( )  :                    37714
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    73472
+** INFO   : nr of internal links   ( )  :                    73472
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     1058
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.3663474969E+12
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    37282
+** INFO   : nr of netlinks         ( )  :                    75863
+** INFO   : nr of flownodes        ( )  :                    38584
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    73571
+** INFO   : nr of internal links   ( )  :                    73571
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     2292
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.7896560186E+12
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : ** Model initialization was successful **
+** INFO   : * Active Model definition:
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    35556
+** INFO   : nr of netlinks         ( )  :                    73221
+** INFO   : nr of flownodes        ( )  :                    37654
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    70137
+** INFO   : nr of internal links   ( )  :                    70137
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     3084
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.1255000274E+13
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    38100
+** INFO   : nr of netlinks         ( )  :                    75217
+** INFO   : nr of flownodes        ( )  :                    37153
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    69905
+** INFO   : nr of internal links   ( )  :                    69905
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     5312
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.4077341177E+12
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    38942
+** INFO   : nr of netlinks         ( )  :                    76374
+** INFO   : nr of flownodes        ( )  :                    37367
+** INFO   : nr of openbnd cells    ( )  :                        0
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    67711
+** INFO   : nr of internal links   ( )  :                    67711
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     8663
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.9021889136E+12
+** INFO   : **
+** INFO   : Modelinit finished   at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : nr of netnodes         ( )  :                    36484
+** INFO   : nr of netlinks         ( )  :                    73683
+** INFO   : nr of flownodes        ( )  :                    37351
+** INFO   : nr of openbnd cells    ( )  :                      197
+** INFO   : nr of 1D-flownodes     ( )  :                        0
+** INFO   : nr of flowlinks        ( )  :                    68336
+** INFO   : nr of internal links   ( )  :                    68139
+** INFO   : nr of 1D links         ( )  :                        0
+** INFO   : nr of closed walls     ( )  :                     5347
+** INFO   : 
+** INFO   : 
+** INFO   : my model area          (m2) :         0.1367981828E+13
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : my model volume        (m3) :         0.1117753781E+15
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : my model volume        (m3) :         0.8296108907E+15
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : my model volume        (m3) :         0.5535232607E+14
+** INFO   : total model area       (m2) :         0.6341855704E+13
+** INFO   : my model volume        (m3) :         0.1258240586E+16
+** INFO   : my model volume        (m3) :         0.2295660916E+16
+** INFO   : my model volume        (m3) :         0.3597792468E+14
+** INFO   : my model volume        (m3) :         0.2418660132E+16
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : my model volume        (m3) :         0.9990678037E+14
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : 
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : 
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : total model volume     (m3) :         0.7105184934E+16
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** INFO   : Writing initial output to file(s)...
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.550616] #3 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.550660] #4 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.551775] #0 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.553036] #1 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.553273] #2 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.554750] #5 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.555981] #6 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:35.556235] #7 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** WARNING: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+Dimr [2021-06-29 19:48:36.501752] #0 >> kernel: Missing coordinate reference system. Now using default: wgs84 (EPSG:4326).
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.531354] #6 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.550526] #4 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.551090] #2 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.593787] #7 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.626155] #3 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.691468] #5 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:36.743788] #1 >> myNameDFlowFM.Update(86400.0)
+** INFO   :    Sim. time done   Sim. time left   Real time used   Real time left Steps left Complete% Interval-averaged time step
+** INFO   :           0d  0:05:00          0d 23:55:00          0d  0:00:00     ??d ??:??:??            287     0.3%     0.00000
+** INFO   : Done writing initial output to file(s).
+Dimr [2021-06-29 19:48:37.553063] #0 >> myNameDFlowFM.Update(86400.0)
+** INFO   : Solver converged in 10 iterations, res= 0.2389E-14 dt =  10.7143
+** INFO   : Solver converged in 11 iterations, res= 0.9354E-15 dt =  11.5714
+** INFO   : Solver converged in 11 iterations, res= 0.3068E-14 dt =  12.6234
+** INFO   : Solver converged in 12 iterations, res= 0.1069E-14 dt =  13.2545
+** INFO   : Solver converged in 12 iterations, res= 0.5669E-14 dt =  13.9909
+** INFO   : Solver converged in 13 iterations, res= 0.3948E-14 dt =  14.8653
+** INFO   : Solver converged in 14 iterations, res= 0.2811E-14 dt =  15.9272
+** INFO   : Solver converged in 15 iterations, res= 0.1712E-14 dt =  17.2544
+** INFO   : Solver converged in 15 iterations, res= 0.1165E-13 dt =  18.9799
+** INFO   : Solver converged in 17 iterations, res= 0.4324E-14 dt =  21.3523
+** INFO   : Solver converged in 18 iterations, res= 0.1559E-13 dt =  24.9111
+** INFO   : Solver converged in 21 iterations, res= 0.1214E-13 dt =  31.1388
+** INFO   : Solver converged in 27 iterations, res= 0.1839E-13 dt =  46.7082
+** INFO   : Solver converged in 27 iterations, res= 0.2033E-13 dt =  46.7082
+** INFO   : Solver converged in 28 iterations, res= 0.2896E-13 dt =  50.0000
+** INFO   : Solver converged in 32 iterations, res= 0.3816E-13 dt =  62.5000
+** INFO   : Solver converged in 40 iterations, res= 0.4182E-13 dt =  93.7500
+** INFO   : Solver converged in 40 iterations, res= 0.4362E-13 dt =  93.7500
+** INFO   : Solver converged in 41 iterations, res= 0.4612E-13 dt = 100.0000
+** INFO   : Solver converged in 41 iterations, res= 0.4212E-13 dt = 100.0000
+** INFO   : Solver converged in 41 iterations, res= 0.4562E-13 dt = 100.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7614E-13 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7554E-13 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8918E-13 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1013E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9950E-13 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1189E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1247E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1314E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1363E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9615E-13 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1035E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9633E-13 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9410E-13 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1822E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1772E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8263E-13 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1782E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1592E-12 dt = 150.0000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:45        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:41        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:45        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:44        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:46        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:42        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:05          0d  0:01:44        276     4.5%     0.00000
+** INFO   :           0d  1:00:00          0d 23:00:00          0d  0:00:04          0d  0:01:24        276     4.5%     0.00000
+** INFO   : Solver converged in 46 iterations, res= 0.1710E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1986E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1703E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1551E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1812E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1951E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2084E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1830E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1625E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1799E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2139E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.2666E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.2635E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3155E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3392E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1856E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2004E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2087E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2106E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2317E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2410E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2439E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2479E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2626E-12 dt = 150.0000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:21        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:07          0d  0:01:19        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:21        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:20        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:21        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:19        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:08          0d  0:01:20        264     8.7%   150.00000
+** INFO   :           0d  2:00:00          0d 22:00:00          0d  0:00:07          0d  0:01:10        264     8.7%   150.00000
+** INFO   : Solver converged in 45 iterations, res= 0.4680E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2862E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2847E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2867E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2818E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5432E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4896E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4580E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4650E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5051E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4516E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3666E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.2465E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.2530E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3837E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4355E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4334E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4095E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4017E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4157E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4453E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4635E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4698E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4406E-12 dt = 150.0000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:10        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:09        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:10        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:10        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:11        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:09        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:10          0d  0:01:10        252    12.8%   150.00000
+** INFO   :           0d  3:00:00          0d 21:00:00          0d  0:00:09          0d  0:01:04        252    12.8%   150.00000
+** INFO   : Solver converged in 45 iterations, res= 0.4420E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3908E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.5854E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.5866E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.5816E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.6877E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.6854E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.7002E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.7302E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.6625E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.6850E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.5975E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.5905E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.6877E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.4863E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.4133E-12 dt = 150.0000
+** INFO   : Solver converged in 43 iterations, res= 0.6080E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.6277E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.7063E-12 dt = 150.0000
+** INFO   : Solver converged in 44 iterations, res= 0.7224E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.3943E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4099E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4278E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4511E-12 dt = 150.0000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:04        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:04        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:03        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:04        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:03        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:03        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:13          0d  0:01:03        240    17.0%   150.00000
+** INFO   :           0d  4:00:00          0d 20:00:00          0d  0:00:12          0d  0:00:59        240    17.0%   150.00000
+** INFO   : Solver converged in 45 iterations, res= 0.4568E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4696E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4756E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4846E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.4983E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5087E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5240E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5322E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5521E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5579E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5953E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.5831E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6248E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6065E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6472E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6518E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6571E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6774E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6975E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6950E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3178E-12 dt = 150.0000
+** INFO   : Solver converged in 45 iterations, res= 0.6725E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3007E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.2977E-12 dt = 150.0000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:16          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:16          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:16          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:15          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:16          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:15          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:16          0d  0:00:58        228    21.1%   150.00000
+** INFO   :           0d  5:00:00          0d 19:00:00          0d  0:00:15          0d  0:00:55        228    21.1%   150.00000
+** INFO   : Solver converged in 46 iterations, res= 0.3006E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3040E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3079E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3127E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3236E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3255E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3490E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3544E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3726E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.3825E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.4121E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.4458E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.4838E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.5351E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.5594E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6128E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6201E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6543E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6566E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6529E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6623E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6328E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6448E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6347E-12 dt = 150.0000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:53        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:18          0d  0:00:54        216    25.3%   150.00000
+** INFO   :           0d  6:00:00          0d 18:00:00          0d  0:00:17          0d  0:00:51        216    25.3%   150.00000
+** INFO   : Solver converged in 46 iterations, res= 0.6616E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6921E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7520E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7834E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.5476E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.5885E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6494E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6696E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7267E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7211E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7810E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7407E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8126E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7389E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8252E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7318E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8267E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7237E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8131E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7064E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7886E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6885E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7755E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6845E-12 dt = 150.0000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:21          0d  0:00:50        204    29.4%   150.00000
+** INFO   :           0d  7:00:00          0d 17:00:00          0d  0:00:20          0d  0:00:48        204    29.4%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.7784E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6938E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7923E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7116E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8034E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7223E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8074E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7223E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7998E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7092E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7818E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6879E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7798E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7056E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8002E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7184E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7960E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7143E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7857E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7091E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7758E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7103E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7687E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7151E-12 dt = 150.0000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:24          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:24          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:24          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:23          0d  0:00:46        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:24          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:23          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:24          0d  0:00:47        192    33.6%   150.00000
+** INFO   :           0d  8:00:00          0d 16:00:00          0d  0:00:23          0d  0:00:45        192    33.6%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.7557E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7164E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7324E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7135E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6990E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6928E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1266E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1245E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1202E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1188E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1146E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1142E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1100E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1098E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1047E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1044E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9843E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9893E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9376E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9403E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8903E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9117E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9186E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9819E-12 dt = 150.0000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:26          0d  0:00:43        180    37.7%   150.00000
+** INFO   :           0d  9:00:00          0d 15:00:00          0d  0:00:25          0d  0:00:42        180    37.7%   150.00000
+** INFO   : Solver converged in 46 iterations, res= 0.9844E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1034E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1037E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1091E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1096E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1146E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1137E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1167E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1112E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1130E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1070E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1122E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1067E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1160E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1248E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1349E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8436E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8908E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9015E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9286E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9288E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9519E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9302E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9399E-12 dt = 150.0000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:29          0d  0:00:40        168    41.9%   150.00000
+** INFO   :           0d 10:00:00          0d 14:00:00          0d  0:00:28          0d  0:00:39        168    41.9%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.9115E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1310E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1261E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1221E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1171E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1123E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1069E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1024E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9555E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8960E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8053E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7599E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7001E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6906E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.6730E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7057E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.7631E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8562E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9608E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1080E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1191E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9245E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9709E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1017E-11 dt = 150.0000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:32          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:32          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:32          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:31          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:32          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:31          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:32          0d  0:00:37        156    46.0%   150.00000
+** INFO   :           0d 11:00:00          0d 13:00:00          0d  0:00:31          0d  0:00:36        156    46.0%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1047E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1084E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1099E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1127E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1142E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1164E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5098E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5231E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5165E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5308E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5235E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5380E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5304E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5439E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5360E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5463E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5373E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5434E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5328E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5347E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5228E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5216E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5098E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5071E-12 dt = 150.0000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:34          0d  0:00:34        144    50.2%   150.00000
+** INFO   :           0d 12:00:00          0d 12:00:00          0d  0:00:33          0d  0:00:33        144    50.2%   150.00000
+** INFO   : Solver converged in 48 iterations, res= 0.4967E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4960E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4883E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4908E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4876E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4935E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.4937E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5013E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5061E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5131E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5245E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5289E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5479E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5491E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5743E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5719E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6010E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.5946E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6256E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6151E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6463E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6317E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6622E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6438E-12 dt = 150.0000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:37          0d  0:00:31        132    54.3%   150.00000
+** INFO   :           0d 13:00:00          0d 11:00:00          0d  0:00:36          0d  0:00:30        132    54.3%   150.00000
+** INFO   : Solver converged in 48 iterations, res= 0.6734E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6520E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6814E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6579E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6878E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6630E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6936E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6676E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6987E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6709E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.7020E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6715E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.7022E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6683E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6987E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6613E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6922E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6522E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6845E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6433E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.6774E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1280E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1283E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1246E-11 dt = 150.0000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:40          0d  0:00:28        120    58.5%   150.00000
+** INFO   :           0d 14:00:00          0d 10:00:00          0d  0:00:39          0d  0:00:27        120    58.5%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1249E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1219E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1223E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1204E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1212E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1208E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1225E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1238E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1260E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1274E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1275E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1280E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1286E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1277E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1285E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1261E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1270E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1236E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1237E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1188E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1171E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1098E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1066E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1010E-11 dt = 150.0000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:42          0d  0:00:25        108    62.6%   150.00000
+** INFO   :           0d 15:00:00          0d  9:00:00          0d  0:00:41          0d  0:00:25        108    62.6%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1008E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9934E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9956E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9830E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9753E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9694E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9779E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9798E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1008E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1015E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1064E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1084E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1131E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1133E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1193E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1204E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1242E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1248E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1281E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1285E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1306E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1306E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1343E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1343E-11 dt = 150.0000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:45          0d  0:00:22         96    66.8%   150.00000
+** INFO   :           0d 16:00:00          0d  8:00:00          0d  0:00:44          0d  0:00:22         96    66.8%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1337E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1326E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1337E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1310E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1261E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1462E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1243E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1001E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1015E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1313E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1243E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1361E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1425E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1450E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1473E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1476E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1485E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1476E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1481E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1468E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1471E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1454E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1455E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1438E-11 dt = 150.0000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:48          0d  0:00:20         84    70.9%   150.00000
+** INFO   :           0d 17:00:00          0d  7:00:00          0d  0:00:47          0d  0:00:19         84    70.9%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1438E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1421E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1420E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1403E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1403E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1386E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1385E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1370E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1369E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1357E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1357E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1347E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1348E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1341E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1344E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1341E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1344E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1343E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1349E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1352E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1356E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1360E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1367E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1370E-11 dt = 150.0000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:51          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:51          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:51          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:50          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:50          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:50          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:51          0d  0:00:17         72    75.1%   150.00000
+** INFO   :           0d 18:00:00          0d  6:00:00          0d  0:00:49          0d  0:00:16         72    75.1%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1376E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1380E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1385E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1389E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1393E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1396E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1400E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1403E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1407E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1410E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1414E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1418E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1422E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1426E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1429E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1432E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1435E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1436E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1437E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1437E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1436E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1434E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1431E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1426E-11 dt = 150.0000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:54          0d  0:00:14         60    79.2%   150.00000
+** INFO   :           0d 19:00:00          0d  5:00:00          0d  0:00:53          0d  0:00:14         60    79.2%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1421E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1412E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1404E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1392E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1382E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1368E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1357E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1342E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1331E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1317E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1308E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1296E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1289E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1280E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1276E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1268E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1264E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1257E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1254E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1248E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1245E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1238E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1234E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1226E-11 dt = 150.0000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:12         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:12         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:12         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:11         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:11         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:11         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:58          0d  0:00:12         48    83.4%   150.00000
+** INFO   :           0d 20:00:00          0d  4:00:00          0d  0:00:57          0d  0:00:11         48    83.4%   150.00000
+** INFO   : Solver converged in 47 iterations, res= 0.1221E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1210E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1202E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1187E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1176E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1158E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1144E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1122E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1106E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1081E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1062E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1034E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1013E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9823E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9585E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9242E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8976E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8591E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8298E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7860E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7532E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7049E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.6641E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1217E-11 dt = 150.0000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:01          0d  0:00:09         36    87.5%   150.00000
+** INFO   :           0d 21:00:00          0d  3:00:00          0d  0:01:00          0d  0:00:09         36    87.5%   150.00000
+** INFO   : Solver converged in 46 iterations, res= 0.1106E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9881E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8992E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.8766E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.9480E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1067E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1185E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7547E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7727E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7698E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7700E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7592E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7528E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7410E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1251E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1234E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1219E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1196E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1180E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1150E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1078E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1176E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1155E-11 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1222E-11 dt = 150.0000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:05          0d  0:00:06         24    91.7%   150.00000
+** INFO   :           0d 22:00:00          0d  2:00:00          0d  0:01:04          0d  0:00:06         24    91.7%   150.00000
+** INFO   : Solver converged in 46 iterations, res= 0.1234E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7446E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7610E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7838E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7912E-12 dt = 150.0000
+** INFO   : Solver converged in 46 iterations, res= 0.1262E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8090E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8179E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7988E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7978E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7737E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7699E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7641E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7987E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7793E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.7955E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.8397E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9227E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.9957E-12 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1087E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1149E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1241E-11 dt = 150.0000
+** INFO   : Solver converged in 47 iterations, res= 0.1302E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.8947E-12 dt = 150.0000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:08          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:07          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:08          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:07          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:08          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:07          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:08          0d  0:00:03         12    95.8%   150.00000
+** INFO   :           0d 23:00:00          0d  1:00:00          0d  0:01:07          0d  0:00:03         12    95.8%   150.00000
+** INFO   : Solver converged in 48 iterations, res= 0.9163E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.9752E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.9893E-12 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1044E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1046E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1096E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1101E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1151E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1141E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1182E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1170E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1216E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1199E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1233E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1211E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1247E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1223E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1252E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1222E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1249E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1220E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1242E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1209E-11 dt = 150.0000
+** INFO   : Solver converged in 48 iterations, res= 0.1227E-11 dt = 150.0000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:10          0d  0:00:00          0   100.0%   150.00000
+** INFO   :           1d  0:00:00          0d  0:00:00          0d  0:01:09          0d  0:00:00          0   100.0%   150.00000
+Dimr [2021-06-29 19:49:47.714799] #3 >> myNameDFlowFM.Finalize()
+Dimr [2021-06-29 19:49:47.714800] #7 >> myNameDFlowFM.Finalize()
+** INFO   : 
+Dimr [2021-06-29 19:49:47.714803] #4 >> myNameDFlowFM.Finalize()
+Dimr [2021-06-29 19:49:47.714831] #1 >> myNameDFlowFM.Finalize()
+** INFO   : 
+** INFO   : 
+Dimr [2021-06-29 19:49:47.714831] #5 >> myNameDFlowFM.Finalize()
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Flow geometry                                        2.9404449463
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Observations init                                    0.0254158974
+** INFO   : extra timer:Flow init                                            2.2486488819
+** INFO   : extra timer:Observations init 2                                  0.0455870628
+** INFO   : extra timer:Sethuau                                              3.1179006100
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Flow geometry                                        2.9404559135
+** INFO   : extra timer:setdt                                                7.5459628105
+** INFO   : extra timer:Compute advection term                               5.7054355145
+** INFO   : extra timer:u0u1                                                 0.0869748592
+** INFO   : extra timer:Flow geometry                                        2.9406061172
+** INFO   : extra timer:Flow geometry                                        2.9404630661
+** INFO   : extra timer:Observations init                                    0.0255780220
+** INFO   : extra timer:Observations init                                    0.0255548954
+** INFO   : extra timer:Flow geometry                                        2.9404549599
+** INFO   : extra timer:Observations init                                    0.0255849361
+** INFO   : extra timer:Flow init                                            2.2477338314
+** INFO   : extra timer:Observations init                                    0.0252320766
+** INFO   : extra timer:Flow init                                            2.2486538887
+** INFO   : extra timer:Observations init 2                                  0.0455892086
+** INFO   : extra timer:Sethuau                                              2.0538051128
+** INFO   : extra timer:Setumod                                             12.9810070992
+** INFO   : extra timer:Findcells/preparecells                               0.1109380722
+** INFO   : extra timer:Renumber flownodes                                   0.0759561062
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6933779716
+** INFO   : extra timer:Observations init 2                                  0.0464529991
+** INFO   : extra timer:Flow init                                            2.2486460209
+** INFO   : extra timer:Observations init 2                                  0.0455892086
+** INFO   : extra timer:Sethuau                                              3.4597251415
+** INFO   : extra timer:setdt                                                5.2017846107
+** INFO   : extra timer:Sethuau                                              3.9284815788
+** INFO   : extra timer:setdt                                               12.3096101284
+** INFO   : extra timer:Compute advection term                               4.3938717842
+** INFO   : extra timer:u0u1                                                 0.0984866619
+** INFO   : extra timer:Setumod                                              8.9308469296
+** INFO   : extra timer:setdt                                                1.6120400429
+** INFO   : extra timer:Init ExtForceFile (old)                              1.3169689178
+** INFO   : extra timer:step_reduce                                         40.5348517895
+** INFO   : extra timer:Transport                                            0.2649090290
+** INFO   : extra timer:Output                                               0.8076319695
+** INFO   : extra timer:Compute advection term                               7.7224316597
+** INFO   : extra timer:Compute advection term                               5.9467318058
+** INFO   : extra timer:u0u1                                                 0.0901830196
+** INFO   : extra timer:Setumod                                             14.6183521748
+** INFO   : extra timer:Findcells/preparecells                               0.1047570705
+** INFO   : extra timer:u0u1                                                 0.1160569191
+** INFO   : extra timer:Flow init                                            2.2486379147
+** INFO   : extra timer:Observations init 2                                  0.0455911160
+** INFO   : extra timer:Set boundaries                                       0.5531015396
+** INFO   : extra timer:Setumod                                             17.7881245613
+** INFO   : extra timer:Findcells/preparecells                               0.1010138988
+** INFO   : extra timer:Renumber flownodes                                   0.0727381706
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6905870438
+** INFO   : extra timer:Init ExtForceFile (old)                              1.6004409790
+** INFO   : extra timer:step_reduce                                         41.9055445194
+** INFO   : extra timer:Findcells/preparecells                               0.1133029461
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : extra timer:Renumber flownodes                                   0.0748651028
+** INFO   : extra timer:Renumber flownodes                                   0.0705108643
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6943330765
+** INFO   : extra timer:Init ExtForceFile (old)                              1.5446100235
+** INFO   : extra timer:step_reduce                                         40.4000630379
+Dimr [2021-06-29 19:49:47.714943] #6 >> myNameDFlowFM.Finalize()
+** INFO   : extra timer:Sethuau                                              3.3383085728
+** INFO   : extra timer:setdt                                                4.7017862797
+** INFO   : extra timer:Compute advection term                               6.0783686638
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6919908524
+** INFO   : extra timer:Transport                                            0.2665176392
+** INFO   : extra timer:Output                                               0.7655684948
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : average timestep       (s)  :           146.1928934010
+Dimr [2021-06-29 19:49:47.714954] #2 >> myNameDFlowFM.Finalize()
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Init ExtForceFile (old)                              1.5107860565
+** INFO   : extra timer:Transport                                            0.2505755424
+** INFO   : extra timer:Output                                               0.7481300831
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : extra timer:step_reduce                                         38.7199025154
+** INFO   : extra timer:u0u1                                                 0.0657110214
+** INFO   : extra timer:Setumod                                             14.8071045876
+** INFO   : extra timer:Findcells/preparecells                               0.0997741222
+** INFO   : extra timer:Transport                                            0.2821192741
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : total computation time (d)  :             0.0009013852
+** INFO   : time modelinit         (d)  :             0.0000785991
+** INFO   : time steps (+ plots)   (d)  :             0.0008227861
+** INFO   : 
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : extra timer:Output                                               0.7247874737
+** INFO   : extra timer:Renumber flownodes                                   0.0733239651
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6935667992
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : total computation time (d)  :             0.0009013324
+** INFO   : time modelinit         (d)  :             0.0000799075
+** INFO   : time steps (+ plots)   (d)  :             0.0008214249
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total computation time (h)  :             0.0216332453
+** INFO   : time modelinit         (h)  :             0.0018863783
+** INFO   : 
+** INFO   : 
+** INFO   : total computation time (d)  :             0.0009013344
+** INFO   : time modelinit         (d)  :             0.0000793040
+** INFO   : time steps (+ plots)   (d)  :             0.0008220304
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+Dimr [2021-06-29 19:49:47.714987] #0 >> myNameDFlowFM.Finalize()
+** INFO   : extra timer:Init ExtForceFile (old)                              1.3159699440
+** INFO   : extra timer:step_reduce                                         40.2807962894
+** INFO   : extra timer:Transport                                            0.2575440407
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : total computation time (h)  :             0.0216319767
+** INFO   : time modelinit         (h)  :             0.0019177792
+** INFO   : time steps (+ plots)   (h)  :             0.0197141975
+** INFO   : 
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : extra timer:Flow geometry                                        2.9406020641
+** INFO   : time steps (+ plots)   (h)  :             0.0197468670
+** INFO   : 
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : total computation time (s)  :            77.8796830177
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : total computation time (h)  :             0.0216320253
+** INFO   : time modelinit         (h)  :             0.0019032950
+** INFO   : time steps (+ plots)   (h)  :             0.0197287303
+** INFO   : 
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : extra timer:Observations init                                    0.0255990028
+** INFO   : extra timer:Output                                               0.7432439327
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Flow init                                            2.2477350235
+** INFO   : total computation time (s)  :            77.8751161098
+** INFO   : time modelinit         (s)  :             6.9040050507
+** INFO   : time steps (+ plots)   (s)  :            70.9711110592
+** INFO   : 
+** INFO   : 
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : time modelinit         (s)  :             6.7909619808
+** INFO   : time steps (+ plots)   (s)  :            71.0887210369
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Flow geometry                                        2.9405930042
+** INFO   : total computation time (s)  :            77.8752911091
+** INFO   : time modelinit         (s)  :             6.8518619537
+** INFO   : time steps (+ plots)   (s)  :            71.0234291553
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Observations init 2                                  0.0464429855
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : extra timer:Observations init                                    0.0256900787
+** INFO   : time iniexternalforc.  (s)  :             1.6019439697
+** INFO   : 
+** INFO   : time inistep           (s)  :            27.9918994904
+** INFO   : time setumod           (s)  :             8.9267625809
+** INFO   : extra timer:Sethuau                                              3.2547023296
+** INFO   : time iniexternalforc.  (s)  :             1.6019599438
+** INFO   : 
+** INFO   : time inistep           (s)  :            29.5822885036
+** INFO   : 
+** INFO   : time iniexternalforc.  (s)  :             1.6019639969
+** INFO   : 
+** INFO   : time inistep           (s)  :            29.5244922638
+** INFO   : time setumod           (s)  :            14.6143875122
+** INFO   : extra timer:setdt                                                6.3280494213
+** INFO   : extra timer:Compute advection term                               6.1817471981
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : extra timer:Flow init                                            2.2478728294
+** INFO   : time furu              (s)  :             0.7237184048
+** INFO   : time solve             (s)  :            36.3269894123
+** INFO   : time setexternalforc.  (s)  :             0.1042954922
+** INFO   : time setexternalfbnd.  (s)  :             0.0030837059
+** INFO   : time steps             (s)  :            70.0963540077
+** INFO   : fraction solve/steps   ( )  :             0.5182436366
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000034998
+** INFO   : 
+** INFO   : time setumod           (s)  :            12.9773294926
+** INFO   : time furu              (s)  :             0.9702560902
+** INFO   : time solve             (s)  :            34.9544181824
+** INFO   : time setexternalforc.  (s)  :             0.1054308414
+** INFO   : time setexternalfbnd.  (s)  :             0.0033314228
+** INFO   : time steps             (s)  :            70.1737294197
+** INFO   : extra timer:u0u1                                                 0.1168475151
+** INFO   : time furu              (s)  :             0.8951475620
+** INFO   : time solve             (s)  :            35.0326607227
+** INFO   : time setexternalforc.  (s)  :             0.1181426048
+** INFO   : time setexternalfbnd.  (s)  :             0.0031588078
+** INFO   : time steps             (s)  :            70.1533155441
+** INFO   : fraction solve/steps   ( )  :             0.4993728443
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : total computation time (d)  :             0.0009017932
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : total computation time (d)  :             0.0009013853
+** INFO   : extra timer:Observations init 2                                  0.0463020802
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : time transport [s]         :             0.2860000002
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Setumod                                             13.8259820938
+** INFO   : extra timer:Findcells/preparecells                               0.1821370125
+** INFO   : fraction solve/steps   ( )  :             0.4981125910
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035056
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : time transport [s]         :             0.2830000001
+** INFO   : time modelinit         (d)  :             0.0000781315
+** INFO   : time steps (+ plots)   (d)  :             0.0008236617
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035527
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : time transport [s]         :             0.2820000002
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Sethuau                                              3.4304764271
+** INFO   : extra timer:setdt                                                3.7679202557
+** INFO   : time modelinit         (d)  :             0.0000782244
+** INFO   : time steps (+ plots)   (d)  :             0.0008231609
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total time in timeloop (h)  :             0.0197141975
+** INFO   : extra timer:Renumber flownodes                                   0.0705888271
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6901321411
+** INFO   : extra timer:Init ExtForceFile (old)                              1.5201129913
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total time in timeloop (h)  :             0.0197287303
+** INFO   : extra timer:step_reduce                                         40.1903564930
+** INFO   : extra timer:Transport                                            0.2552199364
+** INFO   : total computation time (h)  :             0.0216332467
+** INFO   : time modelinit         (h)  :             0.0018773856
+** INFO   : time steps (+ plots)   (h)  :             0.0197558611
+** INFO   : 
+** INFO   : extra timer:Compute advection term                               6.6380198002
+** INFO   : extra timer:u0u1                                                 0.1149578094
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 1
+** INFO   : OpenMP : unavailable.
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Output                                               0.7449610233
+** INFO   : 
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : total computation time (h)  :             0.0216430366
+** INFO   : time modelinit         (h)  :             0.0018751566
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 5
+** INFO   : OpenMP : unavailable.
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Flow geometry                                        2.9405930042
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total time in timeloop (h)  :             0.0197468670
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 3
+** INFO   : OpenMP : unavailable.
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : 
+** INFO   : extra timer:Setumod                                             16.2438936234
+** INFO   : extra timer:Findcells/preparecells                               0.1798710823
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : total computation time (s)  :            77.8796880245
+** INFO   : time modelinit         (s)  :             6.7585880756
+** INFO   : time steps (+ plots)   (s)  :            71.1210999489
+** INFO   : 
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : 
+** INFO   : time steps (+ plots)   (h)  :             0.0197678800
+** INFO   : 
+** INFO   : 
+** INFO   : time iniexternalforc.  (s)  :             1.6019167900
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : time inistep           (s)  :            29.7500231266
+** INFO   : time setumod           (s)  :            14.8030049801
+** INFO   : extra timer:Renumber flownodes                                   0.0733168125
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6921949387
+** INFO   : time furu              (s)  :             0.9136469364
+** INFO   : extra timer:Observations init                                    0.0251579285
+** INFO   : time solve             (s)  :            34.9769318104
+** INFO   : time setexternalforc.  (s)  :             0.1018674374
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : time setexternalfbnd.  (s)  :             0.5493435860
+** INFO   : total computation time (s)  :            77.9149317741
+** INFO   : time modelinit         (s)  :             6.7505638599
+** INFO   : time steps             (s)  :            70.2711994648
+** INFO   : extra timer:Flow init                                            2.2478878498
+** INFO   : fraction solve/steps   ( )  :             0.4977420633
+** INFO   : total computation time (d)  :             0.0009017954
+** INFO   : time modelinit         (d)  :             0.0000781388
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035340
+** INFO   : extra timer:Init ExtForceFile (old)                              1.5702571869
+** INFO   : extra timer:step_reduce                                         39.7518887520
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : time steps (+ plots)   (d)  :             0.0008236566
+** INFO   : 
+** INFO   : time transport [s]         :             0.2880000002
+** INFO   : time steps (+ plots)   (s)  :            71.1643679142
+** INFO   : 
+** INFO   : 
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : extra timer:Observations init 2                                  0.0462970734
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total computation time (h)  :             0.0216430892
+** INFO   : 
+** INFO   : 
+** INFO   : extra timer:Transport                                            0.2457561493
+** INFO   : extra timer:Output                                               0.7438004017
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : extra timer:Sethuau                                              3.0084693432
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : time modelinit         (h)  :             0.0018753303
+** INFO   : time steps (+ plots)   (h)  :             0.0197677589
+** INFO   : 
+** INFO   : 
+** INFO   : time iniexternalforc.  (s)  :             1.5992450714
+** INFO   : 
+** INFO   : time inistep           (s)  :            31.3765203953
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : total time in timeloop (h)  :             0.0197558611
+** INFO   : extra timer:setdt                                                4.4108500481
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 7
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : total computation time (s)  :            77.9151210785
+** INFO   : OpenMP : unavailable.
+** INFO   : time modelinit         (s)  :             6.7511889935
+** INFO   : 
+** INFO   : time setumod           (s)  :            17.7833487988
+** INFO   : time furu              (s)  :             1.2753963470
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : extra timer:Compute advection term                               6.8794786930
+** INFO   : extra timer:u0u1                                                 0.1244058609
+** INFO   : time steps (+ plots)   (s)  :            71.1639320850
+** INFO   : 
+** INFO   : 
+** INFO   : time iniexternalforc.  (s)  :             1.5992431641
+** INFO   : Opened file : output/canada_model_0005_numlimdt.xyz
+** INFO   : 
+** INFO   : time solve             (s)  :            33.0587744713
+** INFO   : time setexternalforc.  (s)  :             0.1132647991
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : extra timer:Setumod                                             14.7790617943
+** INFO   : time inistep           (s)  :            29.9113602638
+** INFO   : time setumod           (s)  :            13.8221492767
+** INFO   : time furu              (s)  :             0.9838714600
+** INFO   : Closed file : output/canada_model_0005_numlimdt.xyz
+** INFO   : 
+** INFO   : extra timer:Findcells/preparecells                               0.1190822124
+** INFO   : time solve             (s)  :            34.6115019321
+** INFO   : time setexternalfbnd.  (s)  :             0.0031113625
+** INFO   : time steps             (s)  :            70.3213443756
+** INFO   : extra timer:Renumber flownodes                                   0.0730390549
+** INFO   : 
+** INFO   : time setexternalforc.  (s)  :             0.0976762772
+** INFO   : time setexternalfbnd.  (s)  :             0.0029416084
+** INFO   : fraction solve/steps   ( )  :             0.4701101033
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : total computation time (d)  :             0.0009017953
+** INFO   : extra timer:Set bedlevel from ext-file                           0.6922497749
+** INFO   : time steps             (s)  :            70.3172407150
+** INFO   : fraction solve/steps   ( )  :             0.4922192848
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035548
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035502
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : extra timer:Init ExtForceFile (old)                              1.5405781269
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : time modelinit         (d)  :             0.0000779101
+** INFO   : time steps (+ plots)   (d)  :             0.0008238852
+** INFO   : extra timer:step_reduce                                         39.5920383930
+** INFO   : time transport [s]         :             0.2470000002
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : extra timer:Transport                                            0.2985949516
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : time transport [s]         :             0.2970000001
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : extra timer:Output                                               0.8136649132
+** INFO   : 
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : total computation time (h)  :             0.0216430883
+** INFO   : time modelinit         (h)  :             0.0018698433
+** INFO   : 
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : time steps (+ plots)   (h)  :             0.0197732450
+** INFO   : 
+** INFO   : 
+** INFO   : nr of timesteps        ( )  :           590.0000000000
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : total time in timeloop (h)  :             0.0197677589
+** INFO   : average timestep       (s)  :           146.1928934010
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 2
+** INFO   : OpenMP : unavailable.
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : total computation time (s)  :            77.9151179790
+** INFO   : nr of setbacks         ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : time modelinit         (s)  :             6.7314360142
+** INFO   : time steps (+ plots)   (s)  :            71.1836819649
+** INFO   : 
+** INFO   : total time in timeloop (h)  :             0.0197678800
+** INFO   : 
+** INFO   : simulation period      (d)  :             1.0000000000
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 4
+** INFO   : OpenMP : unavailable.
+** INFO   : time iniexternalforc.  (s)  :             1.5995302200
+** INFO   : 
+** INFO   : total computation time (d)  :             0.0009017960
+** INFO   : 
+** INFO   : 
+** INFO   : time inistep           (s)  :            30.4015555382
+** INFO   : time modelinit         (d)  :             0.0000897355
+** INFO   : time steps (+ plots)   (d)  :             0.0008120605
+** INFO   : 
+** INFO   : time setumod           (s)  :            16.2397680283
+** INFO   : 
+** INFO   : time furu              (s)  :             1.0433266163
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : time solve             (s)  :            34.3665983677
+** INFO   : total computation time (h)  :             0.0216431045
+** INFO   : time setexternalforc.  (s)  :             0.1015632153
+** INFO   : Opened file : output/canada_model_0001_numlimdt.xyz
+** INFO   : time setexternalfbnd.  (s)  :             0.0027344227
+** INFO   : time modelinit         (h)  :             0.0021536514
+** INFO   : time steps (+ plots)   (h)  :             0.0194894531
+** INFO   : time steps             (s)  :            70.3341670036
+** INFO   : 
+** INFO   : simulation period      (s)  :         86400.0000000000
+** INFO   : Closed file : output/canada_model_0001_numlimdt.xyz
+** INFO   : fraction solve/steps   ( )  :             0.4886188297
+** INFO   : 
+** INFO   : total computation time (s)  :            77.9151761532
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000035341
+** INFO   : time modelinit         (s)  :             7.7531449795
+** INFO   : time steps (+ plots)   (s)  :            70.1620311737
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : time iniexternalforc.  (s)  :             1.5994498730
+** INFO   : 
+** INFO   : time transport [s]         :             0.2420000002
+** INFO   : time inistep           (s)  :            29.4000837803
+** INFO   : time setumod           (s)  :            14.7749752998
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : time furu              (s)  :             0.9085862637
+** INFO   : time solve             (s)  :            33.7203674316
+** INFO   : time setexternalforc.  (s)  :             0.1365306377
+** INFO   : 
+** INFO   : 
+** INFO   : time setexternalfbnd.  (s)  :             0.0035338402
+** INFO   : time steps             (s)  :            69.2079887390
+** INFO   : fraction solve/steps   ( )  :             0.4872322986
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : total/(dnt*ndx)        (s)  :             0.0000034227
+** INFO   : av nr of cont. it s1it ( )  :             0.0000000000
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : time transport [s]         :             0.3230000002
+** INFO   : 
+** INFO   : time debug     [s]         :             0.0000000000
+** INFO   : 
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : 
+** INFO   : Computation started  at: 19:48:35, 29-06-2021
+** INFO   : total time in timeloop (h)  :             0.0197732450
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 6
+** INFO   : Computation finished at: 19:49:47, 29-06-2021
+** INFO   : 
+** INFO   : OpenMP : unavailable.
+** INFO   : 
+** INFO   : simulation period      (h)  :            24.0000000000
+** INFO   : 
+** INFO   : total time in timeloop (h)  :             0.0194894531
+** INFO   : 
+** INFO   : MPI    : yes.         #processes   : 8, my_rank: 0
+** INFO   : OpenMP : unavailable.
+** INFO   : 
+** INFO   : 
+** INFO   : 
+** INFO   : Opened file : output/canada_model_0002_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0002_numlimdt.xyz
+** INFO   : 
+** INFO   : Opened file : output/canada_model_0004_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0004_numlimdt.xyz
+** INFO   : 
+** INFO   : Opened file : output/canada_model_0003_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0003_numlimdt.xyz
+** INFO   : 
+** INFO   : Opened file : output/canada_model_0006_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0006_numlimdt.xyz
+** INFO   : 
+** INFO   : Opened file : output/canada_model_0007_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0007_numlimdt.xyz
+** INFO   : 
+Dimr [2021-06-29 19:49:47.716571] #5 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.716584] #5 >> myNameDFlowFM	: 77.941572 sec
+Dimr [2021-06-29 19:49:47.716590] #5 >> DIMR_LIB	: 78.101510 sec
+Dimr [2021-06-29 19:49:47.716595] #5 >> DIMR_EXE	: 78.71626 sec
+** INFO   : Opened file : output/canada_model_0000_numlimdt.xyz
+** INFO   : Closed file : output/canada_model_0000_numlimdt.xyz
+** INFO   : 
+Dimr [2021-06-29 19:49:47.716749] #1 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.716761] #1 >> myNameDFlowFM	: 77.941753 sec
+Dimr [2021-06-29 19:49:47.716767] #1 >> DIMR_LIB	: 78.101687 sec
+Dimr [2021-06-29 19:49:47.716771] #1 >> DIMR_EXE	: 78.70954 sec
+Dimr [2021-06-29 19:49:47.716760] #2 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.716774] #2 >> myNameDFlowFM	: 77.968707 sec
+Dimr [2021-06-29 19:49:47.716780] #2 >> DIMR_LIB	: 78.486496 sec
+Dimr [2021-06-29 19:49:47.716785] #2 >> DIMR_EXE	: 78.71712 sec
+Dimr [2021-06-29 19:49:47.716886] #3 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.716896] #3 >> myNameDFlowFM	: 77.941971 sec
+Dimr [2021-06-29 19:49:47.716902] #3 >> DIMR_LIB	: 78.101823 sec
+Dimr [2021-06-29 19:49:47.716906] #3 >> DIMR_EXE	: 78.71158 sec
+Dimr [2021-06-29 19:49:47.716868] #4 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.716881] #4 >> myNameDFlowFM	: 77.968923 sec
+Dimr [2021-06-29 19:49:47.716887] #4 >> DIMR_LIB	: 78.486602 sec
+Dimr [2021-06-29 19:49:47.716892] #4 >> DIMR_EXE	: 78.72208 sec
+Dimr [2021-06-29 19:49:47.717324] #6 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.717340] #6 >> myNameDFlowFM	: 77.969118 sec
+Dimr [2021-06-29 19:49:47.717349] #6 >> DIMR_LIB	: 78.487065 sec
+Dimr [2021-06-29 19:49:47.717356] #6 >> DIMR_EXE	: 78.72248 sec
+Dimr [2021-06-29 19:49:47.718371] #7 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.718383] #7 >> myNameDFlowFM	: 77.943451 sec
+Dimr [2021-06-29 19:49:47.718392] #7 >> DIMR_LIB	: 78.103250 sec
+Dimr [2021-06-29 19:49:47.718400] #7 >> DIMR_EXE	: 78.73163 sec
+Dimr [2021-06-29 19:49:47.719220] #0 >> TIMER INFO:
+
+Dimr [2021-06-29 19:49:47.719232] #0 >> myNameDFlowFM	: 77.966347 sec
+Dimr [2021-06-29 19:49:47.719237] #0 >> DIMR_LIB	: 78.488954 sec
+Dimr [2021-06-29 19:49:47.719242] #0 >> DIMR_EXE	: 78.74182 sec

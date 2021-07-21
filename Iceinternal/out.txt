@@ -1,0 +1,38 @@
+Driver: netCDF/Network Common Data Format
+Files: CMEMSTidal.nc
+Size is 512, 512
+Metadata:
+  NC_GLOBAL#bulletin_date=2021-05-26
+  NC_GLOBAL#bulletin_type=Forecast
+  NC_GLOBAL#CDI=Climate Data Interface version 1.9.2 (http://mpimet.mpg.de/cdi)
+  NC_GLOBAL#CDO=Climate Data Operators version 1.9.2 (http://mpimet.mpg.de/cdo)
+  NC_GLOBAL#comment=
+  NC_GLOBAL#Conventions=CF-1.4
+  NC_GLOBAL#field_date=2021-06-04T00:00:00Z
+  NC_GLOBAL#Forecast_range=10 days
+  NC_GLOBAL#FROM_ORIGINAL_FILE__field_type=Files based on file type archs
+  NC_GLOBAL#history=20210526:Created by program hyc2proj, version V0.3
+  NC_GLOBAL#institution=NERSC, Thormoehlens gate 47, N-5006 Bergen, Norway
+  NC_GLOBAL#references=http://topaz.nersc.no
+  NC_GLOBAL#source=NERSC-HYCOM model fields
+  NC_GLOBAL#title=Arctic Ocean Physics Analysis and Forecast, 3 km quarter-hourly instantaneous (dataset-topaz6-tide-arc-qhr-myoceanv2-be)
+  NC_GLOBAL#_CoordSysBuilder=ucar.nc2.dataset.conv.CF1Convention
+Subdatasets:
+  SUBDATASET_1_NAME=NETCDF:"CMEMSTidal.nc":model_depth
+  SUBDATASET_1_DESC=[595x595] sea_floor_depth_below_sea_level (32-bit floating-point)
+  SUBDATASET_2_NAME=NETCDF:"CMEMSTidal.nc":latitude
+  SUBDATASET_2_DESC=[595x595] latitude (32-bit floating-point)
+  SUBDATASET_3_NAME=NETCDF:"CMEMSTidal.nc":vxo
+  SUBDATASET_3_DESC=[192x595x595] sea_water_x_velocity (32-bit floating-point)
+  SUBDATASET_4_NAME=NETCDF:"CMEMSTidal.nc":vyo
+  SUBDATASET_4_DESC=[192x595x595] sea_water_y_velocity (32-bit floating-point)
+  SUBDATASET_5_NAME=NETCDF:"CMEMSTidal.nc":longitude
+  SUBDATASET_5_DESC=[595x595] longitude (32-bit floating-point)
+  SUBDATASET_6_NAME=NETCDF:"CMEMSTidal.nc":zos
+  SUBDATASET_6_DESC=[192x595x595] sea_surface_height_above_geoid (32-bit floating-point)
+Corner Coordinates:
+Upper Left  (    0.0,    0.0)
+Lower Left  (    0.0,  512.0)
+Upper Right (  512.0,    0.0)
+Lower Right (  512.0,  512.0)
+Center      (  256.0,  256.0)
