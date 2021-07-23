@@ -14,9 +14,9 @@ import readdata
 
 
 ## readin boundary and creating the .bc file.
-file=os.path.join('gtsm_runs','Jan2013v4.1','gtsm_model_0000_his.nc')
-locindex=(np.linspace(0,474,475)).astype(int)  #reading only boundary. 
-
+file=os.path.join('gtsm_runs','Jan2013v4.1_3dmodel','gtsm_model_0000_his.nc')
+# locindex=(np.linspace(0,474,475)).astype(int)  #reading only boundary. 
+locindex=(np.linspace(0,405,406)).astype(int) 
 gtsmbdata=readdata.readmodel(file,locindex)
 
 time=gtsmbdata['time']
@@ -43,17 +43,17 @@ def createbc(time,h,filename):
     nfileobj=open(filename,'w')
     i=0
     for i in range(len(lon)):
-        if i<198:
+        if i<140:
             boundname='right_boundary_0'+"{:03d}".format(i+1)
         else:
-            boundname='left_boundary_0'+"{:03d}".format(i-197)        
+            boundname='left_boundary_0'+"{:03d}".format(i-139)        
         writeheader(nfileobj,boundname)
         for j in range(len(time)):
             nfileobj.write(str(timemins[j])+'  '+"{:.6f}".format(h[j,i])+'\n')
         
     nfileobj.close()
 
-newfile='gtsm_runs/gtsmwaterlevel10km_5e-2_month.bc'
+newfile='gtsm_runs/gtsmwaterlevel10km_5e-2_2_month.bc'
 
 createbc(time,h,newfile)
 print('boundary file created.')

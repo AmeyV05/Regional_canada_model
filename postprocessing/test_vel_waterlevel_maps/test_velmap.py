@@ -1,3 +1,4 @@
+#%%
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 '''
@@ -24,7 +25,8 @@ from scipy.interpolate import griddata
 
 #reading map merged model file.
 # mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_boundary_runs','fesboundaryoutput','canada_model_merged_map.nc')
-mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
+# mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
+mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','fesboundaryoutput','canada_model_merged_map.nc')
 mapdata=readdata.readmodelmap(mapfile)
 
 lon=mapdata['lon']
@@ -71,3 +73,5 @@ quiv=ax1.quiver(longrid[skip],latgrid[skip],ugrid[skip],vgrid[skip],transform=cc
 fig.colorbar(cont)
 fig.savefig(path1+'postprocessing/test_vel_waterlevel_maps/velocity_'+str(j)+'.jpg',dpi=1000)
 print('done')
+
+# %%
