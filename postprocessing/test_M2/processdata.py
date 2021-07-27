@@ -21,11 +21,11 @@ from postprocessing import readdata, tideanalysis
 
 # reading of the datasets.
 # reading canada model w FES boundary
-locindex=(475+np.linspace(0,742,743)).astype(int)  
-
+# locindex=(475+np.linspace(0,742,743)).astype(int)  
+locindex=(406+np.linspace(0,742,743)).astype(int) 
 #%%
 #Modelwfes data
-modelffile=os.path.join(path1,'model_runs','cartesius_runs','test_boundary_runs','fesboundaryoutput','canada_model_0000_his.nc')
+modelffile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','fesboundaryoutput','canada_model_0000_his.nc')
 modelfdata=readdata.readmodel(modelffile,locindex)
 #tidla analysis and conversion to NC
 (M2AMf,M2PMf,Mflon,Mflat)=tideanalysis.tidalanalysis(modelfdata)
@@ -40,7 +40,7 @@ fesdata=readdata.readfes(fesfile,locindex)
 readdata.createNC(M2AF,M2PF,Flon,Flat,'FESM2canada')
 #%%
 #GTSM data
-gtsmfile=os.path.join(path1,'gtsm_runs','Jan2013v4.1','gtsm_model_0000_his.nc')
+gtsmfile=os.path.join(path1,'gtsm_runs','Jan2013v4.1_3dmodel','gtsm_model_0000_his.nc')
 gtsmdata=readdata.readmodel(gtsmfile,locindex)
 # # tidal analysis and conversion of to NC file. 
 (M2AG,M2PG,Glon,Glat)=tideanalysis.tidalanalysis(gtsmdata)
@@ -48,13 +48,32 @@ readdata.createNC(M2AG,M2PG,Glon,Glat,'GTSMM2canada')
 
 #%%
 #Modelwgtsm data
-modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_0000_his.nc')
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','gtsmboundaryoutput','canada_model_0000_his.nc')
 modelgdata=readdata.readmodel(modelgfile,locindex)
 #tidla analysis and conversion to NC
 (M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata)
 readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2gtsmb')
 
+#%%
+#fastice runs without bottom correction from xiaohui. 
 
+#Modelwfes boundary data
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','ficefesboundaryoutput','canada_model_0000_his.nc')
+modelgdata=readdata.readmodel(modelgfile,locindex)
+#tidla analysis and conversion to NC
+(M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata)
+readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2ficefesb')
 print('done')
 
+# %%
+#%%
+#fastice runs without bottom correction from xiaohui. 
+
+#Modelwfes boundary data
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','ficegtsmboundaryoutput','canada_model_0000_his.nc')
+modelgdata=readdata.readmodel(modelgfile,locindex)
+#tidla analysis and conversion to NC
+(M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata)
+readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2ficegtsmb')
+print('done')
 # %%
