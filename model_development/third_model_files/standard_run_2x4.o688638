@@ -1,0 +1,91 @@
+OMP_NUM_THREADS is 2
+    Configfile       : dimr.xml
+    D3D_HOME         : /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/..
+    PROC_DEF_DIR     : /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/../share/delft3d
+    Working directory: /p/1230882-emodnet_hrsm/fromAmey/Regional_canada_model/model_runs/standard_run
+    Number of slots  : 8
+    Docker parallel  : 0
+    mpiexec is /opt/apps/mpich/3.3.2_intel18.0.3/bin/mpiexec
+
+Contents of machinefile:
+p-mcs125.directory.intra:1
+p-mcs037.directory.intra:1
+p-mcs125.directory.intra:1
+p-mcs037.directory.intra:1
+p-mcs125.directory.intra:1
+p-mcs037.directory.intra:1
+p-mcs125.directory.intra:1
+p-mcs037.directory.intra:1
+----------------------------------------------------------------------
+executing:
+mpiexec -np 8 /p/d-hydro/dimrset/weekly/2.16.05.71137/lnx64/bin/../bin/dimr dimr.xml 
+#2: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.358763] #2 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#0: Running parallel with 8 partitions
+#1: Running parallel with 8 partitions
+#6: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.358986] #0 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#4: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.358641] #1 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-30 09:54:16.359032] #6 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-30 09:54:16.359084] #4 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#5: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.358859] #5 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#7: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.358976] #7 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+#3: Running parallel with 8 partitions
+Dimr [2021-06-30 09:54:16.359308] #3 >> Deltares, DIMR_EXE Version 2.00.00.68758, Apr  8 2021, 20:36:11
+Dimr [2021-06-30 09:54:16.366150] #2 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.366150] #6 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.366204] #0 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.366204] #4 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.367805] #1 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.367805] #5 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.367851] #3 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.367849] #7 >> Deltares, DIMR_LIB Version 1.02.00.68758, Apr  8 2021, 20:36:04
+Dimr [2021-06-30 09:54:16.655300] #0 >> 
+Dimr [2021-06-30 09:54:16.655342] #0 >> Version Information of Components
+Dimr [2021-06-30 09:54:16.655354] #0 >> =================================
+Dimr [2021-06-30 09:54:16.655332] #6 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.655379] #2 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.655379] #4 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.684710] #0 >> dflowfm                            : 1.2.120.68758
+Dimr [2021-06-30 09:54:16.684726] #0 >> ---------------------------------
+Dimr [2021-06-30 09:54:16.684732] #0 >> 
+Dimr [2021-06-30 09:54:16.684766] #0 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.697224] #1 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.697224] #3 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.697224] #7 >> myNameDFlowFM.Initialize(canada_model.mdu)
+Dimr [2021-06-30 09:54:16.697286] #5 >> myNameDFlowFM.Initialize(canada_model.mdu)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+ loading model
+ loading model
+ loading model
+ loading model
+** ERROR  : Error opening file canada_model_0002.mdu .
+** ERROR  : Error opening file canada_model_0000.mdu .
+** ERROR  : Error opening file canada_model_0006.mdu .
+** ERROR  : Error opening file canada_model_0004.mdu .
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+** DEBUG  :            0  0.1000010      NOD(KMAX)
+** DEBUG  :            6  0.7000070      XK (KMAX), YK (KMAX), ZK (KMAX), KC (KMAX), NMK (KMAX), RNOD(KMAX)
+ loading model
+ loading model
+ loading model
+ loading model
+** ERROR  : Error opening file canada_model_0003.mdu .
+** ERROR  : Error opening file canada_model_0001.mdu .
+** ERROR  : Error opening file canada_model_0007.mdu .
+** ERROR  : Error opening file canada_model_0005.mdu .

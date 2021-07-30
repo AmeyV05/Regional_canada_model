@@ -7,7 +7,8 @@ Created on Mon Jul 05 2021 3:13:13 PM
 Copyright (c) 2021 Deltares
 '''
 import sys
-sys.path.append('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing/')
+sys.path.append('/u/vasulkar/p_emodnet_amey/Regional_canada_model/')
+path1=sys.path[-1]
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
@@ -17,11 +18,15 @@ import seaborn as sns
 sns.set_theme("paper")
 import os
 import xarray as xr
-import readdata
+from postprocessing import readdata
+
 
 #reading map merged model file.
 # mapfile=os.path.join('..','model_runs','cartesius_runs','test_boundary_runs','output','canada_model_merged_map.nc')
-mapfile=os.path.join('model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
+# mapfile=os.path.join('model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
+# mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','fesboundaryoutput','canada_model_merged_map.nc')
+mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
+
 mapdata=readdata.readmodelmap(mapfile)
 
 lon=mapdata['lon']
@@ -80,12 +85,5 @@ print('done')
 # anim=animation.FuncAnimation(fig,animate,frames=10,blit=True)
 # anim.save('test_vel_waterlevel_maps/waterlevel_map.mp4',writer=FFWriter)
 # print('done')
-
-# %% Matplotlib plot
-import numpy as np
-import matplotlib.pyplot as plt
-x=np.linspace(0,20,199)
-plt.plot(x,np.sin(x))
-plt.show()
 
 # %%
