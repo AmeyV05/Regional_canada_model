@@ -77,6 +77,7 @@ modelgdata=readdata.readmodel(modelgfile,locindex)
 readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2ficegtsmb')
 print('done')
 # %%
+<<<<<<< HEAD
 
 #Modelwfes boundary data and no ice and no bottom friction calibration
 modelfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','noicenobottomfesboundaryoutput','canada_model_0000_his.nc')
@@ -105,3 +106,5 @@ modelgdata=readdata.readmodel(modelgfile,locindex)
 (M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata)
 readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2fice18fesb')
 # %%
+=======
+>>>>>>> 5c37096043dbec9c15eb3dae256cdd4bcd5be4d2
