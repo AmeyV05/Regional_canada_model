@@ -194,13 +194,13 @@ comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2noicenobottomfesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
-name='noicenobottomModelwGTSM-FES'
+name='noicenobottomModelwFES-FES'
 comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 
-name='noicenobottomModelwGTSM-GTSM'
+name='noicenobottomModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='noicenobottomModelwGTSM-Altimetry'
+name='noicenobottomModelwFES-Altimetry'
 comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 

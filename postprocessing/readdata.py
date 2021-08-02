@@ -69,12 +69,16 @@ def readaltidata(file):
     M2amp=altdata.Ampl_mean.values
     M2ph=altdata.Phase_mean.values
     #Coordinates anticlockwise from left bottom. Remember to update this based on new canada modelgrid.
-    lon0,lat0=-157.5,50.39
-    lon1,lat1=-47.1,50.39
-    lon2,lat2=-47.1,83.21
-    lon3,lat3=-157.5,83.21
-    (svec,sM2amp)=snappingcanadagrid(lonlatvec,M2amp,lon0,lon1,lat0,lat2)
-    (svec,sM2ph)=snappingcanadagrid(lonlatvec,M2ph,lon0,lon1,lat0,lat2)
+    # lon0,lat0=-157.5,50.39
+    # lon1,lat1=-47.1,50.39
+    # lon2,lat2=-47.1,83.21
+    # lon3,lat3=-157.5,83.21
+    lon0,lat0=-150.0,50.0
+    lon1,lat0=-72.0,50.0
+    lon2,lat1=-47.1,52.65
+    lon2,lat2=-47.1,83.21 
+    (svec,sM2amp)=snappingcanadagrid(lonlatvec,M2amp,lon0,lon1,lon2,lat0,lat1,lat2)
+    (svec,sM2ph)=snappingcanadagrid(lonlatvec,M2ph,lon0,lon1,lon2,lat0,lat1,lat2)
     tidvec=np.vstack((sM2amp,sM2ph)).T
     return(svec,tidvec)
 
@@ -101,7 +105,7 @@ def snapstations(vec1,vec2,tidvec1,tidvec2,reltol):
     #vec2 one to compare to, one with lower number of values. 
     # vec1 the superset of vec2 # these are both n x 2 arrays x 2 are lon and lat respectively.
     # tidvec1 and tidvec2 are the amplitude and phase corresponding to vec1 and vec2 respectively.
-    delindex=[]
+    delindex=np.array([])
     xvec1=[];yvec1=[]
     namp1=[];nph1=[]
     for i in range(len(vec2[:,0])):
@@ -139,11 +143,14 @@ def createNC(Amp,Ph,Lon,Lat,name):
 
  #here is obs is nx2 vector with lon and lat and obsname is name of the obs it could also be something like M2 amp or phase etc.
 
-def snappingcanadagrid(obs,obsname,lon0,lon1,lat0,lat2): 
+def snappingcanadagrid(obs,obsname,lon0,lon1,lon2,lat0,lat1,lat2):  # 0 is left most or bottomost
     nobs=np.zeros((2,1))
     nobsname=[]
     for i in range(len(obs[:,0])):
-        if (lon0<=obs[i,0]<=lon1) and (lat0<=obs[i,1]<=lat2):
+        if (lon0<=obs[i,0]<=lon1) and (lat0<=obs[i,1]<=lat2): 
+            nobs=np.append(nobs,[[obs[i,0]],[obs[i,1]]],axis=1)
+            nobsname=np.append(nobsname,obsname[i])
+        elif (lon1<=obs[i,0]<=lon2) and (lat1<=obs[i,1]<=lat2):
             nobs=np.append(nobs,[[obs[i,0]],[obs[i,1]]],axis=1)
             nobsname=np.append(nobsname,obsname[i])
     nobs=nobs[:,1:].T
