@@ -18,7 +18,7 @@ from postprocessing import readdata
 import cartopy.crs as ccrs
 import cartopy.feature as cpf 
 
-tideconst='M2'
+tideconst='S2'
 
 #defining the plot function.
 
@@ -27,7 +27,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     fig=plt.figure(figsize=(20,14),frameon=True)
     cmap='seismic'
 
-    # title='M2amp'
+    # title='S2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
     ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
@@ -39,7 +39,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     cbar.ax.tick_params(labelsize=18)
     # Phase subplot
     level=50.
-    # title='M2ph'
+    # title='S2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
     ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
@@ -52,7 +52,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
 
     # ax.set_title(title)
     fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' ) RMSE:'+'%.4f' % diffamrms+'m', fontsize=20,y=0.91)
-    fname=os.path.join(path1,'postprocessing','test_M2',name+'.jpg')
+    fname=os.path.join(path1,'postprocessing','test_S2',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
 #computing phase differences considering 360==0 phase idea from Inger.
@@ -80,16 +80,17 @@ def comparedatasets(Modstavec,Modtidvec,Obsstavec,Obstidvec,name):
 # reading of all these datasets. 
 
 #FES data
-fesfile=os.path.join(path1,'postprocessing','test_M2','FESM2canada.nc')
+fesfile=os.path.join(path1,'postprocessing','test_S2','FESS2canada.nc')
 (Fstavec,Ftidvec)=readdata.readtidedata(fesfile)
 
 #GTSM data
-gtsmfile=os.path.join(path1,'postprocessing','test_M2','GTSMM2canada.nc')
+gtsmfile=os.path.join(path1,'postprocessing','test_S2','GTSMS2canada.nc')
 (Gstavec,Gtidvec)=readdata.readtidedata(gtsmfile)
 
-#Altimetry data
-altfile=os.path.join(path1,'Altimetry_vanInger','ModM2Arctic_altimetry.nc')
-(Astavec,Atidvec)=readdata.readaltidata(altfile)
+#no S2 altimetry data available yet
+# #Altimetry data
+# altfile=os.path.join(path1,'Altimetry_vanInger','ModS2Arctic_altimetry.nc')
+# (Astavec,Atidvec)=readdata.readaltidata(altfile)
 
 #%%
 
@@ -108,7 +109,7 @@ comparedatasets(Gstavec,Gtidvec,Fstavec,Ftidvec,name)
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2fesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2fesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='sModelwFES-FES'
@@ -117,13 +118,13 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='sModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='sModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='sModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 
 #model with gtsm b
 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2gtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='sModelwGTSM-FES'
@@ -132,8 +133,8 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='sModelwGTSM-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='sModelwGTSM-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='sModelwGTSM-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 
 #%%
 # Model with fast ice and no bottom friction calibration from xiaohui. 
@@ -141,7 +142,7 @@ comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2ficefesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2ficefesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='ficeModelwFES-FES'
@@ -150,13 +151,13 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='ficeModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='ficeModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='ficeModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 
 #model with gtsm b
 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2ficegtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2ficegtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='ficeModelwGTSM-FES'
@@ -165,8 +166,8 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='ficeModelwGTSM-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='ficeModelwGTSM-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='ficeModelwGTSM-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 
 #%%
 
@@ -176,7 +177,7 @@ comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2fice37fesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2fice37fesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='fice37ModelwFES-FES'
@@ -185,14 +186,14 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='fice37ModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='fice37ModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='fice37ModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 
 #%%
 #model with fes boundary and no ice and no bottom friction calibration. 
 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2noicenobottomfesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2noicenobottomfesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='noicenobottomModelwFES-FES'
@@ -201,8 +202,8 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='noicenobottomModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='noicenobottomModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='noicenobottomModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 
 #%%
@@ -213,7 +214,7 @@ print('done')
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2fice18fesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2fice18fesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='fice18ModelwFES-FES'
@@ -222,8 +223,8 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='fice18ModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='fice18ModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='fice18ModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 
 # %%
@@ -231,7 +232,7 @@ print('done')
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salfesb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2salfesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALModelwFES-FES'
@@ -240,8 +241,8 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='SALModelwFES-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='SALModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='SALModelwFES-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 
 # %%
@@ -249,7 +250,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salgtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','test_S2','ModS2salgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALModelwGTSM-FES'
@@ -258,44 +259,7 @@ comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 name='SALModelwGTSM-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='SALModelwGTSM-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+# name='SALModelwGTSM-Altimetry'
+# comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
-# %%
-# model with standard model forcings and SAL but different friction coeff for HB HS UB 
-# With GTSM boundary. 
-# reading of the model results 
-#model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salbottomgtsmb.nc')
-(Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
-
-name='SALbottom1ModelwGTSM-FES'
-comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
-
-name='SALbottom1ModelwGTSM-GTSM'
-comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
-
-name='SALbottom1ModelwGTSM-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
-print('done')
-
-
-# %%
-# model with standard model forcings and SAL but different friction coeff for HB HS UB 
-# With FES boundary. 
-# reading of the model results 
-#model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salbottomfesb.nc')
-(Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
-
-name='SALbottom3ModelwFES-FES'
-comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
-
-name='SALbottom3ModelwFES-GTSM'
-comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
-
-name='SALbottom3ModelwFES-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
-print('done')
-
 # %%

@@ -61,3 +61,6 @@
 model_runs/cartesius_runs/test_3rd_boundary_runs/fice_37fesboundaryoutput/.$
 .gitignore
 model_runs/cartesius_runs/test_3rd_boundary_runs/noicenobottomfesboundaryoutput/.$
+
+*.pdf
+*.xlsx

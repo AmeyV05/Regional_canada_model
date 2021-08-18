@@ -38,10 +38,10 @@ def computetidal(ssh,time,StationLat,StationLon,const,epoch1,tidalconst):
             Upstlat=np.append(Upstlat,StationLat[i])
     return(amp,ph,Upstlon,Upstlat)
 
-def tidalanalysis(data):
+def tidalanalysis(data,tideconst):
     const=['K1','O1','Q1', 'P1','N2','M2','S2','K2']
     epoch1='1970-01-01'
-    tidalconst='M2'
+    tidalconst=tideconst
     time=data['time']
     timedatnum=np.array(date2num(time))
     Stationlon=data['lon'];Stationlat=data['lat']
