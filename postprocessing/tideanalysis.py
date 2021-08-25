@@ -39,7 +39,8 @@ def computetidal(ssh,time,StationLat,StationLon,const,epoch1,tidalconst):
     return(amp,ph,Upstlon,Upstlat)
 
 def tidalanalysis(data,tideconst):
-    const=['K1','O1','Q1', 'P1','N2','M2','S2','K2']
+    # const=['K1','O1','Q1', 'P1','N2','M2','S2','K2']
+    const=['K1','O1','Q1', 'P1','N2','M2','S2','K2','H2','H1']
     epoch1='1970-01-01'
     tidalconst=tideconst
     time=data['time']
@@ -48,6 +49,28 @@ def tidalanalysis(data,tideconst):
     ssh=data['h']
     (Amp,Ph,nlon,nlat)=computetidal(ssh,timedatnum,Stationlat,Stationlon,const,epoch1,tidalconst)
     return(Amp,Ph,nlon,nlat)
+
+def compute1stationtidal(data,tideconst):
+    const=['K1','O1','Q1', 'P1','N2','M2','S2','K2','H2','H1']
+    epoch1='1970-01-01'
+    tidalconst=tideconst
+    time=data['time']
+    timedatnum=np.array((date2num(time))).flatten()
+    Stationlon=data['lon'];Stationlat=data['lat']
+    sshi=np.array((data['h']))
+    coef = utide.solve(timedatnum,sshi,lat=Stationlat[0],
+                        epoch=epoch1,
+                        constit=const,
+                        conf_int='linear',
+                        white=True,
+                        method='ols')
+    Amp=coef['A']
+    Ph=coef['g']
+    name=coef['name']
+    j=np.where(name==tidalconst)
+    amp=Amp[j] 
+    ph=Ph[j]
+    return(amp,ph)
 
 def fake_tide(t, M2amp, M2phase):
     """
