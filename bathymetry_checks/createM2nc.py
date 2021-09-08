@@ -1,3 +1,4 @@
+#%%
 #!/usr/bin/env python3
 # -*- coding:utf-8 -*-
 '''
@@ -14,7 +15,12 @@ import xarray as xr
 from postprocessing import tideanalysis
 from bathymetry_checks import readchsdata
 import time
-
+import os
+try:
+    os.chdir(os.path.join(os.getcwd(),'bathymetry_checks')) # 
+    print(os.getcwd())
+except:
+    pass
 
 # sys.stdout = log_file
 sdate='2020-01-01T00:00:00Z'  # sdate of all data
@@ -26,6 +32,7 @@ edate='2021-01-01T00:00:00Z'  # end date of all data.
 stationjsonfile='chsstations.json'
 (allstationinfodata,stationamevec,stationidvec,stationlonvec,stationlatvec)=readchsdata.getallstationmetadata(stationjsonfile)
 
+#%%
 # for each station.
 tideconst='M2'
 def getampph(tideconst,sdate,edate,stationidvec,stationlonvec,stationlatvec):

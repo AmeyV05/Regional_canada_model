@@ -39,8 +39,9 @@ def getwldata(sdate,edate,stationid,stationlon,stationlat):
     print(np.shape(Tlvec))
     return(data)
 
-j=0  #upto where the last station was saved
-for i in range(len(stationidvec[j:])):
+j=204  #upto where the last station was saved
+i=j
+for id in range(len(stationidvec[j:])):
     stationid=stationidvec[i]
     stationlon=[stationlonvec[i]]
     stationlat=[stationlatvec[i]]
@@ -57,7 +58,8 @@ for i in range(len(stationidvec[j:])):
     header='Station Name:'+stationamevec[i]+'\t Station number:'+str(i)+'\tStation id:'+stationid+'\n'+'Lon:'+str(stationlon[0])+'\tLat:'+str(stationlat[0])
     # np.savetxt('bathymetry_checks/CHSdata/'+stationamevec[i]+'.wl',vec,fmt='%s',delimiter="\t\t",header=header)
     np.savetxt('CHSdata/'+stationamevec[i]+'.wl',vec,fmt='%s',delimiter="\t\t",header=header)
-
+    i+=1
+    time.sleep(2)
 # #%%
 # wldatatxt = np.loadtxt('bathymetry_checks/CHSdata/'+stationamevec[i]+'.wl',dtype='str',skiprows=2)
 

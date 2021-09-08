@@ -1,6 +1,5 @@
 {
     "python.analysis.extraPaths": [
         "./postprocessing"
-    ],
-    "jupyter.notebookFileRoot": "${workspaceFolder}"
+    ]
 }

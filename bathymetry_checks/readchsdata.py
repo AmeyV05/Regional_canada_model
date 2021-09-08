@@ -8,6 +8,8 @@ Copyright (c) 2021 Deltares
 '''
 import numpy as np 
 import requests
+from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 import datetime
 import json
 import time
@@ -23,18 +25,29 @@ def readCHStide(stationid,sdate,edate):
     )
     #the below sometimes gave Json decode error
     chsurl='https://api-iwls.dfo-mpo.gc.ca/api/v1/stations/'+stationid+'/data'
-    response = requests.get(chsurl, headers=headers, params=params)
+    # response = requests.get(chsurl, headers=headers, params=params)
     done=0
     #sometimes response headers fail
     while done==0:
         chsurl='https://api-iwls.dfo-mpo.gc.ca/api/v1/stations/'+stationid+'/data'
-        response = requests.get(chsurl, headers=headers, params=params)
-        if 'json' in response.headers.get('Content-Type'):
-            data=response.json()
-            done=1
-        else:
-            print('Response content is not in JSON format. Trying again...')
+        # session=requests.Session()
+        # retry=Retry(connect=3, backoff_factor=0.5)
+        # adapter=HTTPAdapter(max_retries=retry)
+        # session.mount('http://',adapter)
+        # session.mount('https://', adapter)
+        # response = session.get(chsurl, headers=headers, params=params)
+        try:
+            response = requests.get(chsurl, headers=headers, params=params)
+            if 'json' in response.headers.get('Content-Type'):
+                data=response.json()
+                done=1
+            else:
+                print('Response content is not in JSON format. Trying again...')
+                time.sleep(10)
+        except:  # requests.exceptions.ConnectionError:
+            print("Connection refused")
             time.sleep(10)
+
     # data=response.json()
     return(data)
 
@@ -47,6 +60,8 @@ def gettimewaterlevel(data):
         wlvec=np.append(wlvec,ele['value'])
     return(tvec,wlvec)
 
+#A function which gives the data for the tide gauge from CHS portal which it provides data for only 7 days.
+# But we can script it to get a longer data
 def getmergedata(sdate,edate,stationid):
     #getting a time vec of start and end dates based on two big start and end dates.
 
@@ -80,7 +95,9 @@ def getmergedata(sdate,edate,stationid):
         Wlvec=np.append(Wlvec,wlvec[:-1])
     return(Tvec,Wlvec)
 
-
+## Reading the meta data for all the stations from the json file. 
+# we don't consider stations which are discontinued.
+# And only consider ones which give wlp i.e. water level predictions.
 def getallstationmetadata(stationjsonfile):
     #getting the station data of all possible stations at CHS 
     allstationinfo=open(stationjsonfile)
