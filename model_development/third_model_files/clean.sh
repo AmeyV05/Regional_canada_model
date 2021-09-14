@@ -24,4 +24,4 @@ rm -f statistics_*.txt stats.mat
 rm -f log*.irlog
 rm -f hostfile[0-9]*
 rm -f err.txt out.txt
-rm -f gtsm_canada_1_[0-9]*_net.nc
+rm -f gtsm__canada_2_[0-9]*_net.nc

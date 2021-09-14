@@ -140,4 +140,27 @@ modelgdata=readdata.readmodel(modelgfile,locindex)
 (M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata,tideconst)
 readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2salbottomfesb')
 
+
+# %%
+#Modelwgtsm boundary data and sal (standard model with sal) but with bath corr 0.1 
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','salbathcorr0.1gtsmboundaryoutput','canada_model_0000_his.nc')
+modelgdata=readdata.readmodel(modelgfile,locindex)
+#tidla analysis and conversion to NC
+(M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata,tideconst)
+readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2salbath0.1gtsmb')
+
+# %%
+#Modelwgtsm boundary data and sal (standard model with sal) but with bath corr 0.1 only in part of HB
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','salbathcorrHBgtsmboundaryoutput','canada_model_0000_his.nc')
+modelgdata=readdata.readmodel(modelgfile,locindex)
+#tidla analysis and conversion to NC
+(M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata,tideconst)
+readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2salbathHBgtsmb')
+# %%
+#Modelwgtsm boundary data and sal (standard model with sal) but with no bath corr 0.1 in above part of HB. so same as normal sal
+modelgfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','salbathnocorrgtsmboundaryoutput','canada_model_0000_his.nc')
+modelgdata=readdata.readmodel(modelgfile,locindex)
+#tidla analysis and conversion to NC
+(M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata,tideconst)
+readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2salnobathgtsmb')
 # %%

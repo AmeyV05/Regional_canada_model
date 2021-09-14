@@ -32,6 +32,9 @@ rm -f $basedir/$name.out
 rm -f $basedir/$name.err
 rm -f $basedir/sim.done
 
+#mergelist file
+mergefile=listmapfilescartesius.txt
+
 # Create sbatch script and submit job
 echo "#! /bin/bash" >sbatch_$name.sh
 echo "#SBATCH -N ${nNodes}" >>sbatch_$name.sh
@@ -59,7 +62,9 @@ echo "dflowfm --partition:ndomains=$nPart:icgsolver=6 $mdufile" >>sbatch_$name.s
 echo "srun -N $nNodes -n $nPart dflowfm  --autostartstop $mdufile" >>sbatch_$name.sh 
 echo "touch $basedir/sim.done" >>sbatch_$name.sh
 echo "Merging map files." >>sbatch_$name.sh
-echo "sh ./run_mapmerge_cartesius.sh" >>sbatch_$name.sh
+#echo "sh ./run_mapmerge_cartesius.sh" >>sbatch_$name.sh
+echo "dfmoutput mapmerge --listfile $mergefile">>sbatch_$name.sh
+echo "touch $basedir/merge.done">>sbatch_$name.sh
 chmod +x sbatch_$name.sh
 export result=`sbatch ./sbatch_$name.sh `
 echo "sbatch --> $result"
@@ -67,4 +72,3 @@ echo $?
 squeue -u $USER
 echo "Submitting done."
 echo "========================================================================="
-

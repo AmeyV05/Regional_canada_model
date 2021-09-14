@@ -25,7 +25,7 @@ from postprocessing import readdata
 # mapfile=os.path.join('..','model_runs','cartesius_runs','test_boundary_runs','output','canada_model_merged_map.nc')
 # mapfile=os.path.join('model_runs','cartesius_runs','test_boundary_runs','gtsmboundaryoutput','canada_model_merged_map.nc')
 # mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','fesboundaryoutput','canada_model_merged_map.nc')
-mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','salbathcorr0.1gtsmboundaryoutput','canada_model_merged_map.nc')
+mapfile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','salbathcorrHBgtsmboundaryoutput','canada_model_merged_map.nc')
 
 
 #%%
@@ -34,8 +34,10 @@ mapdata=readdata.readmodelmap(mapfile)
 #%%
 lon=mapdata['lon']
 lat=mapdata['lat']
-h=mapdata['h']
+Hd=mapdata['Hd']
 time=mapdata['time']
+
+#%%
 ##plotting of waterlevel map and animation using triangulations.
 j=24*7
 triang=readdata.gettriangulation(lon,lat)
@@ -46,12 +48,12 @@ ax1=fig.add_subplot(1,1,1,projection=proj)
 ax1.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
 feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
 ax1.add_feature(feature)
-contour_opts = {'levels': np.linspace(-2,2,50),
+contour_opts = {'levels': np.linspace(0,500,100),
                 'cmap':'jet','transform':ccrs.PlateCarree()}
-cont=ax1.tricontourf(triang,h[j,:],**contour_opts)
+cont=ax1.tricontourf(triang,Hd[j,:],**contour_opts)
 fig.colorbar(cont)
 title=ax1.set_title('Waterlevel map at'+str(time[j]))
-fig.savefig('postprocessing/test_vel_waterlevel_maps/gtsmwaterlevel_'+str(j)+'.jpg',dpi=1000)
+fig.savefig('salbathcorrHBgtsmwaterdepth_'+str(j)+'.jpg',dpi=1000)
 print('done')
 
 ##failed animation attempt!!! ignore! or find a solution to it.

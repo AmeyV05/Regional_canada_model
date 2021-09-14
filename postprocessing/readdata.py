@@ -16,7 +16,7 @@ import matplotlib.tri as tri
 def readmodel(file,locindex):
     moddata=xr.open_dataset(file)
     timemod=moddata.time.values
-    modlon=moddata.station_x_coordinate.values[locindex] #0:78 for coarse #0:245 fine
+    modlon=moddata.station_x_coordinate.values[locindex] #0:245 fine
     modlat=moddata.station_y_coordinate.values[locindex]
     name=moddata.station_name.values[locindex]
     hmod=moddata.waterlevel.values[:,locindex]
@@ -44,11 +44,12 @@ def readmodelmap(file):
     yfelem=mapset.FlowElem_ycc.values
     hfelem=mapset.s1.values
     ufelem=mapset.ucx.values
+    WDfelem=mapset.waterdepth.values
     vfelem=mapset.ucy.values
     time=mapset.time.values
     mapset.close()
     print("Reading map file done.")
-    mapdata={'time':time,'lon':xfelem,'lat':yfelem,'h':hfelem,'u':ufelem,'v':vfelem,'nelem':nfelem}
+    mapdata={'time':time,'lon':xfelem,'lat':yfelem,'h':hfelem,'Hd':WDfelem,'u':ufelem,'v':vfelem,'nelem':nfelem}
     return(mapdata)
 
 def readtidedata(file):
@@ -139,7 +140,8 @@ def snapstations(vec1,vec2,tidvec1,tidvec2,reltol):
 
 def createNC(Amp,Ph,Lon,Lat,name):
     ds=xr.Dataset({'Amp':Amp,'Ph':Ph,'lon':Lon,'lat':Lat})
-    ds.to_netcdf(name+'.nc')
+    fname=os.path.join('ncdata',name+'.nc')
+    ds.to_netcdf(fname)
 
  #here is obs is nx2 vector with lon and lat and obsname is name of the obs it could also be something like M2 amp or phase etc.
 
