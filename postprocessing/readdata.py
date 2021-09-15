@@ -83,6 +83,16 @@ def readaltidata(file):
     tidvec=np.vstack((sM2amp,sM2ph)).T
     return(svec,tidvec)
 
+def readtgdata(file,tideconst):
+    tideset=xr.open_dataset(file)
+    Lon=tideset.Lon.values
+    Lat=tideset.Lat.values
+    Amp=tideset.M2amp.values
+    Ph=tideset.M2ph.values
+    station=tideset.stationname.values
+    stavec=np.vstack((Lon,Lat)).T
+    tidvec=np.vstack((Amp,Ph)).T
+    return(stavec,tidvec,station)
 
 def gettriangulation(x,y):
     # Create the Triangulation; no triangles so Delaunay triangulation created.
