@@ -352,4 +352,39 @@ comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 name='SALnobathHBModelwGTSM-Altimetry'
 comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
+
+# %%
+# model with standard model forcings and SAL but 0.1 bathymetry corr added in part of HB
+# With GTSM boundary. 
+# reading of the model results 
+#model gtsm
+modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2salbathLAT0.1gtsmb.nc')
+(Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
+
+name='SALbathLAT0.1ModelwGTSM-FES'
+comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
+
+name='SALbathLAT0.1ModelwGTSM-GTSM'
+comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
+
+name='SALbathLAT0.1ModelwGTSM-Altimetry'
+comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+print('done')
+# %%
+# model with standard model forcings and SAL but no 0.1 bathymetry corr added in part of HB
+# With GTSM boundary. 
+# reading of the model results 
+#model gtsm
+modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2vis2gtsmb.nc')
+(Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
+
+name='Vis2ModelwGTSM-FES'
+comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
+
+name='Vis2ModelwGTSM-GTSM'
+comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
+
+name='Vis2ModelwGTSM-Altimetry'
+comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+print('done')
 # %%
