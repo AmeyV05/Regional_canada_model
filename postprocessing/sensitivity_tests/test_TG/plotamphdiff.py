@@ -67,11 +67,17 @@ def realphasediff(ph1,ph2):
             diff[i]=ph1[i]-ph2[i]    
     return(diff)
 
-def comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name):
-    (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec,Mfstavec,Mftidvec)
-    diffamfmwf=(Mftidvec[:,0]-nTGtidvec[:,0])
-    diffphfmwf=realphasediff(Mftidvec[:,1],TGtidvec[:,1])
-    plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,-diffphfmwf,name)
+# def comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name):
+#     (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec,Mfstavec,Mftidvec)
+#     diffamfmwf=(Mftidvec[:,0]-nTGtidvec[:,0])
+#     diffphfmwf=realphasediff(Mftidvec[:,1],TGtidvec[:,1])
+#     plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,-diffphfmwf,name)
+
+def comparedatasets(Modstavec,Modtidvec,Obsstavec,Obstidvec,name):
+    (nModstavec,nObsstavec,nModtidvec,nObstidvec)=readdata.snapstations(Modstavec,Obsstavec,Modtidvec,Obstidvec,1e-3)
+    diffamfmwf=nModtidvec[:,0]-nObstidvec[:,0]
+    diffphfmwf=realphasediff(nModtidvec[:,1],nObstidvec[:,1])
+    plotdiff(nObsstavec[:,0],nObsstavec[:,1],diffamfmwf,diffphfmwf,name)
 
 #%%
 # compare the results with M2 from TG data. remember this data is yearly and it already has H1 and H2

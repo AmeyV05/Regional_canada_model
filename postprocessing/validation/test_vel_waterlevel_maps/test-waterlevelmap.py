@@ -51,7 +51,7 @@ contour_opts = {'levels': np.linspace(-2,2,50),
 cont=ax1.tricontourf(triang,h[j,:],**contour_opts)
 fig.colorbar(cont)
 title=ax1.set_title('Waterlevel map at'+str(time[j]))
-fig.savefig('postprocessing/test_vel_waterlevel_maps/gtsmwaterlevel_'+str(j)+'.jpg',dpi=1000)
+fig.savefig('postprocessing/validation/test_vel_waterlevel_maps/gtsmwaterlevel_'+str(j)+'.jpg',dpi=1000)
 print('done')
 
 ##failed animation attempt!!! ignore! or find a solution to it.

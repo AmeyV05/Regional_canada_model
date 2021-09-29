@@ -52,7 +52,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
 
     # ax.set_title(title)
     fig.suptitle('Relative Difference of '+tideconst+'amp and phase ('+name+' ) RMSE:'+'%.4f' % diffamrms+'m', fontsize=20,y=0.91)
-    fname=os.path.join(path1,'postprocessing','test_M2','figures',name+'.jpg')
+    fname=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
 #computing phase differences considering 360==0 phase idea from Inger.

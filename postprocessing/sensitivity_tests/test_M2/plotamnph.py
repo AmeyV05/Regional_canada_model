@@ -51,7 +51,7 @@ def plotamph(Lon,Lat,am,ph,name):
 
     # ax.set_title(title)
     fig.suptitle(tideconst+'amp and phase ('+name+' ) ', fontsize=20,y=0.91)
-    fname=os.path.join(path1,'postprocessing','test_M2','figures',name+'.jpg')
+    fname=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
 
@@ -71,7 +71,7 @@ plotamph(Fstavec[:,0],Fstavec[:,1],Ftidvec[:,0],Ftidvec[:,1],name)
 #%%
 
 #GTSM data
-gtsmfile=os.path.join(path1,'postprocessing','test_M2','GTSMM2canada.nc')
+gtsmfile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','GTSMM2canada.nc')
 (Gstavec,Gtidvec)=readdata.readtidedata(gtsmfile)
 name='GTSM'
 plotamph(Gstavec[:,0],Gstavec[:,1],Gtidvec[:,0],Gtidvec[:,1],name)
@@ -90,7 +90,7 @@ plotamph(Astavec[:,0],Astavec[:,1],Atidvec[:,0],Atidvec[:,1],name)
 # With FES boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2fesb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ModM2fesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 name='SModelwFES'
 plotamph(Mfstavec[:,0],Mfstavec[:,1],Mftidvec[:,0],Mftidvec[:,1],name)
@@ -99,7 +99,7 @@ plotamph(Mfstavec[:,0],Mfstavec[:,1],Mftidvec[:,0],Mftidvec[:,1],name)
 #model with gtsm b
 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ModM2gtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='sModelwGTSM-FES'
@@ -242,7 +242,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salbottomgtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ModM2salbottomgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALbottom1ModelwGTSM-FES'
@@ -261,7 +261,7 @@ print('done')
 # With FES boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ModM2salbottomfesb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ModM2salbottomfesb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALbottom3ModelwFES-FES'

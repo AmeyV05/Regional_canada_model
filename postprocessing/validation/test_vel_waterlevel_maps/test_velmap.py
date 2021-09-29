@@ -72,7 +72,7 @@ cont=ax1.contourf(longrid,latgrid,umag,levels=np.linspace(0,0.3,50),cmap='jet',t
 # quiv=ax1.quiver(longrid[skip],latgrid[skip],ugrid[skip],vgrid[skip],colors[skip],transform=ccrs.PlateCarree(),units='xy',cmap=cmap,norm=norm,scale_units='width')
 quiv=ax1.quiver(longrid[skip],latgrid[skip],ugrid[skip],vgrid[skip],transform=ccrs.PlateCarree(),units='xy',scale_units='width',color='white')
 fig.colorbar(cont)
-fig.savefig(path1+'postprocessing/test_vel_waterlevel_maps/gtsmvelocity_'+str(j)+'.jpg',dpi=1000)
+fig.savefig(path1+'postprocessing/validation/test_vel_waterlevel_maps/gtsmvelocity_'+str(j)+'.jpg',dpi=1000)
 print('done')
 
 # %%

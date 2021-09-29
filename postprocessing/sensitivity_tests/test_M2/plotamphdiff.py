@@ -52,7 +52,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
 
     # ax.set_title(title)
     fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' ) RMSE:'+'%.4f' % diffamrms+'m', fontsize=20,y=0.91)
-    fname=os.path.join(path1,'postprocessing','test_M2','figures',name+'.jpg')
+    fname=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
 #computing phase differences considering 360==0 phase idea from Inger.
@@ -80,15 +80,15 @@ def comparedatasets(Modstavec,Modtidvec,Obsstavec,Obstidvec,name):
 # reading of all these datasets. 
 
 #FES data
-fesfile=os.path.join(path1,'postprocessing','test_M2','ncdata','FESM2canada.nc')
+fesfile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','FESM2canada.nc')
 (Fstavec,Ftidvec)=readdata.readtidedata(fesfile)
 
 #GTSM data
-gtsmfile=os.path.join(path1,'postprocessing','test_M2','ncdata','GTSMM2canada.nc')
+gtsmfile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','GTSMM2canada.nc')
 (Gstavec,Gtidvec)=readdata.readtidedata(gtsmfile)
 
 #Altimetry data
-altfile=os.path.join(path1,'Altimetry_vanInger','ModM2Arctic_altimetry.nc')
+altfile=os.path.join(path1,'Altimetry_vanInger','sensitivity_tests','ModM2Arctic_altimetry.nc')
 (Astavec,Atidvec)=readdata.readaltidata(altfile)
 
 #%%
@@ -304,7 +304,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2salbath0.1gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2salbath0.1gtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALbath0.1ModelwGTSM-FES'
@@ -322,7 +322,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2salbathHBgtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2salbathHBgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALbathHBModelwGTSM-FES'
@@ -340,7 +340,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2salnobathgtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2salnobathgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALnobathHBModelwGTSM-FES'
@@ -358,7 +358,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2salbathLAT0.1gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2salbathLAT0.1gtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='SALbathLAT0.1ModelwGTSM-FES'
@@ -375,7 +375,7 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','test_M2','ncdata','ModM2vis2gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2vis2gtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
 name='Vis2ModelwGTSM-FES'

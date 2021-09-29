@@ -22,7 +22,8 @@ from postprocessing import readdata, tideanalysis
 # reading of the datasets.
 # reading canada model w FES boundary
 # locindex=(475+np.linspace(0,742,743)).astype(int)  
-locindex=(1149+np.linspace(0,155,156)).astype(int) 
+locindex=(1149+np.linspace(0,153,154)).astype(int)  #2 locations are not snapped! 
+
 tideconst='M2'
 #%%
 #Standard model with SAL and TG and altimtry in his file.
@@ -34,3 +35,5 @@ readdata.createNC(M2AMf,M2PMf,Mflon,Mflat,'TGsalModelwgtsmb')
 
 
 
+
+# %%
