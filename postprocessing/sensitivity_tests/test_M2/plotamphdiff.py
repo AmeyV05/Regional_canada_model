@@ -325,13 +325,13 @@ print('done')
 modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2salbathHBgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 
-name='SALbathHBModelwGTSM-FES'
+name='SALbath15HBModelwGTSM-FES'
 comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
 
-name='SALbathHBModelwGTSM-GTSM'
+name='SALbath15HBModelwGTSM-GTSM'
 comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
 
-name='SALbathHBModelwGTSM-Altimetry'
+name='SALbath15HBModelwGTSM-Altimetry'
 comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 

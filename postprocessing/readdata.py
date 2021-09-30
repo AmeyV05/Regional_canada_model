@@ -37,6 +37,18 @@ def readfes(file,locindex):
     fesdat={'time':timfes,'lon':feslon,'lat':feslat,'h':hfes,'station':stations}
     return(fesdat)
 
+def readfestg(file):
+    fesdata=xr.open_dataset(file)
+    timfes=fesdata.time.values
+    feslon=fesdata.lon.values
+    feslat=fesdata.lat.values
+    hfes=fesdata.tide.values
+    stations=fesdata.stations.values
+    print("FES2014 data reading done.")
+    fesdata.close()
+    fesdat={'time':timfes,'lon':feslon,'lat':feslat,'h':hfes,'station':stations}
+    return(fesdat)
+
 def readmodelmap(file):
     mapset=xr.open_dataset(file)
     nfelem=mapset.nFlowElem.values

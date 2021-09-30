@@ -52,7 +52,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
 
     # ax.set_title(title)
     fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' ) RMSE:'+'%.4f' % diffamrms+'m', fontsize=20,y=0.91)
-    fname=os.path.join(path1,'postprocessing','test_TG','figures',name+'.jpg')
+    fname=os.path.join(path1,'postprocessing','sensitivity_tests','test_TG','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
 #computing phase differences considering 360==0 phase idea from Inger.
@@ -67,17 +67,13 @@ def realphasediff(ph1,ph2):
             diff[i]=ph1[i]-ph2[i]    
     return(diff)
 
-# def comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name):
-#     (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec,Mfstavec,Mftidvec)
-#     diffamfmwf=(Mftidvec[:,0]-nTGtidvec[:,0])
-#     diffphfmwf=realphasediff(Mftidvec[:,1],TGtidvec[:,1])
-#     plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,-diffphfmwf,name)
+def comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name):
+    (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec)
+    diffamfmwf=(Mftidvec[:,0]-nTGtidvec[:,0])
+    diffphfmwf=realphasediff(Mftidvec[:,1],TGtidvec[:,1])
+    plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,-diffphfmwf,name)
 
-def comparedatasets(Modstavec,Modtidvec,Obsstavec,Obstidvec,name):
-    (nModstavec,nObsstavec,nModtidvec,nObstidvec)=readdata.snapstations(Modstavec,Obsstavec,Modtidvec,Obstidvec,1e-3)
-    diffamfmwf=nModtidvec[:,0]-nObstidvec[:,0]
-    diffphfmwf=realphasediff(nModtidvec[:,1],nObstidvec[:,1])
-    plotdiff(nObsstavec[:,0],nObsstavec[:,1],diffamfmwf,diffphfmwf,name)
+
 
 #%%
 # compare the results with M2 from TG data. remember this data is yearly and it already has H1 and H2
@@ -91,24 +87,29 @@ tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
 # With GTSM boundary. 
 # reading of the model results 
 #model fes b
-modelffile=os.path.join(path1,'postprocessing','test_TG','ncdata','TGsalModelwgtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_TG','ncdata','TGsalModelwgtsmb.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
 name='TGSALModelwGTSM-TG'
 comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name)
 
+
 #%%
-def snapTG(TGstavec,TGtidvec,Mfstavec,Mftidvec):
-    nTGstavec=np.zeros(np.shape(Mfstavec))
-    nTGtidvec=np.zeros(np.shape(Mftidvec))
-    for i in range(len(Mfstavec[:,0])):
-        lon=Mfstavec[i,0]
-        lat=Mfstavec[i,1]
-        for j in range(len(TGstavec[:,0])):
-            if (lon==TGstavec[j,0] and lat==TGstavec[j,1]):
-                nTGstavec[i,0]=TGstavec[j,0];nTGstavec[i,1]=TGstavec[j,1]
-                nTGtidvec[i,0]=TGtidvec[j,0];nTGtidvec[i,1]=TGtidvec[j,1]
+def snapTG(TGstavec,TGtidvec):
+
+    # only two stations are not snapped in regional model. Fort Albany and Port Nelson
+    # their values are 52 and 74. 
+    nTGstavec=np.delete(TGstavec,[52,74],axis=0)
+    nTGtidvec=np.delete(TGtidvec,[52,74],axis=0)
+
+    # for i in range(len(Mfstavec[:,0])):
+    #     lon=Mfstavec[i,0]
+    #     lat=Mfstavec[i,1]
+    #     for j in range(len(TGstavec[:,0])):
+    #         if (lon==TGstavec[j,0] and lat==TGstavec[j,1]):
+    #             nTGstavec[i,0]=TGstavec[j,0];nTGstavec[i,1]=TGstavec[j,1]
+    #             nTGtidvec[i,0]=TGtidvec[j,0];nTGtidvec[i,1]=TGtidvec[j,1]
     return(nTGstavec,nTGtidvec)
 
-(nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec,Mfstavec,Mftidvec)   
+# (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec)   
 
 # %%
