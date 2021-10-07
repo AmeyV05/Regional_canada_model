@@ -36,3 +36,8 @@ name='FESTGannual_nonsnapped'
 readdata.createNC(M2AFtg,M2PFtg,festgdata['lon'],festgdata['lat'],name)
 print('done')
 # %%
+
+
+
+
+

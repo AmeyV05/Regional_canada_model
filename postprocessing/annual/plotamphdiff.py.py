@@ -92,6 +92,7 @@ def snapTG(TGstavec,TGtidvec):
     return(nTGstavec,nTGtidvec)
 
 #%%
+# all region.
 # compare the results with annual M2 from TG data. remember this data is yearly and it already has H1 and H2
 #TG data
 tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
@@ -105,7 +106,5 @@ fesncfile=os.path.join(path1,'postprocessing','annual','ncdata','FESTGannual.nc'
 name=tideconst+'_(FES-TG)_annual'
 comparedatasets(TGstavec,TGtidvec,Ftgstavec,Ftgtidvec,name)
 
-
-
-
 # %%
+

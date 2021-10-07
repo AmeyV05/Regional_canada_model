@@ -13,7 +13,7 @@ sys.path.append('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing
 import readdata
 
 
-
+## Time analysis
 ## readin boundary and creating the .bc file.
 file=os.path.join('gtsm_runs','Jan2013v4.1_3dmodel','gtsm_model_0000_his.nc')
 # locindex=(np.linspace(0,474,475)).astype(int)  #reading only boundary. 

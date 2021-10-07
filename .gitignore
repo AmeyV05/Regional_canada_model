@@ -67,3 +67,10 @@ model_runs/cartesius_runs/test_3rd_boundary_runs/noicenobottomfesboundaryoutput/
 *.txt
 *.wl
 *.zip
+*.tif
+*.shp
+*.dbf
+*.prj
+*.qpj
+*.shx
+*.cpg

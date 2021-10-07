@@ -181,3 +181,17 @@ def snappingcanadagrid(obs,obsname,lon0,lon1,lon2,lat0,lat1,lat2):  # 0 is left 
     # print(nobs.shape)
     # print(nobsname.shape)
     return(nobs,nobsname)
+
+# selecting location from stanamevec which correspond to rstanamevec
+def selectlocs(stanamevec,statidvec,rstanamevec):
+    selamvec=[];selphvec=[]
+    for i in range(len(rstanamevec)):
+        j=np.where(stanamevec==rstanamevec[i])
+        # print(j[0][0])
+        # print((j))
+        selamvec=np.append(selamvec,statidvec[j[0][0],0])
+        selphvec=np.append(selphvec,statidvec[j[0][0],1])
+    if len(rstanamevec)!=len(selamvec):
+        print("Some locations cannot be found. Please check again.")
+    seltidvec=np.vstack((selamvec,selphvec))
+    return(seltidvec.T)
