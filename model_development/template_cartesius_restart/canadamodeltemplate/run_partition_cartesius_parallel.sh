@@ -3,7 +3,7 @@
 # ===========================================================================
 # model to run:
 set -e
-nNodes=4
+nNodes="$1"
 nProc=24 # tasks per node
 mdufile=canada_model.mdu
 #dfmversion=%FMVERSION%

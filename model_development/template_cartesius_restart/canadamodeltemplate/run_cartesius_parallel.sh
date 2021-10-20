@@ -3,7 +3,7 @@
 # ===========================================================================
 # model to run:
 set -e
-nNodes=3
+nNodes="$1"
 nProc=24 # tasks per node
 mdufile=canada_model.mdu
 #dfmversion=%FMVERSION%
@@ -63,8 +63,8 @@ echo "srun -N $nNodes -n $nPart dflowfm  --autostartstop $mdufile" >>sbatch_$nam
 echo "touch $basedir/sim.done" >>sbatch_$name.sh
 echo "Merging map files." >>sbatch_$name.sh
 #echo "sh ./run_mapmerge_cartesius.sh" >>sbatch_$name.sh
-echo "dfmoutput mapmerge --listfile $mergefile">>sbatch_$name.sh
-echo "touch $basedir/merge.done">>sbatch_$name.sh
+# echo "dfmoutput mapmerge --listfile $mergefile">>sbatch_$name.sh
+# echo "touch $basedir/merge.done">>sbatch_$name.sh
 chmod +x sbatch_$name.sh
 export result=`sbatch ./sbatch_$name.sh `
 echo "sbatch --> $result"

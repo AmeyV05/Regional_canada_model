@@ -11,6 +11,8 @@ import numpy as np
 import os
 import xarray as xr
 import matplotlib.tri as tri
+import datetime
+from calendar import monthrange
 
 
 def readmodel(file,locindex):
@@ -94,6 +96,32 @@ def readaltidata(file):
     (svec,sM2ph)=snappingcanadagrid(lonlatvec,M2ph,lon0,lon1,lon2,lat0,lat1,lat2)
     tidvec=np.vstack((sM2amp,sM2ph)).T
     return(svec,tidvec)
+
+def readmonthaltidata(file,month):
+    altdata=xr.open_dataset(file)
+    lonsta=altdata.longitude.values
+    latsta=altdata.latitude.values
+    lonlatvec=np.vstack((lonsta,latsta)).T
+    if month=='March':
+        M2amp=altdata.Ampl_march.values
+        M2ph=altdata.Phase_march.values
+    else:
+        M2amp=altdata.Ampl_sept.values
+        M2ph=altdata.Phase_sept.values
+    #Coordinates anticlockwise from left bottom. Remember to update this based on new canada modelgrid.
+    # lon0,lat0=-157.5,50.39
+    # lon1,lat1=-47.1,50.39
+    # lon2,lat2=-47.1,83.21
+    # lon3,lat3=-157.5,83.21
+    lon0,lat0=-150.0,50.0
+    lon1,lat0=-72.0,50.0
+    lon2,lat1=-47.1,52.65
+    lon2,lat2=-47.1,83.21 
+    (svec,sM2amp)=snappingcanadagrid(lonlatvec,M2amp,lon0,lon1,lon2,lat0,lat1,lat2)
+    (svec,sM2ph)=snappingcanadagrid(lonlatvec,M2ph,lon0,lon1,lon2,lat0,lat1,lat2)
+    tidvec=np.vstack((sM2amp,sM2ph)).T
+    return(svec,tidvec)
+
 
 def readtgdata(file,tideconst):
     tideset=xr.open_dataset(file)
@@ -194,4 +222,45 @@ def selectlocs(stanamevec,statidvec,rstanamevec):
     if len(rstanamevec)!=len(selamvec):
         print("Some locations cannot be found. Please check again.")
     seltidvec=np.vstack((selamvec,selphvec))
+
     return(seltidvec.T)
+
+# time computations
+def timecomputations():
+    ## Time vec computation.
+    tstart='201301010000'
+    tstop ='201312310000'
+    tinit=7#time to start and ignore before tstart [days]
+    timap=15*24*60. #increment between maps [minutes]
+
+    #compute times for runs
+    dt_spinup=datetime.timedelta(days=tinit)
+    tf=datetime.datetime.strptime(tstart,"%Y%m%d%H%M")
+    tl=datetime.datetime.strptime(tstop,"%Y%m%d%H%M")
+    month0=int( tf.strftime("%m"))
+    year0=int( tf.strftime("%Y"))
+    tblock = monthrange(year0, month0)[1]
+    print(month0,year0,tblock)
+    ti=datetime.timedelta(days=tblock)
+    t0=tf-dt_spinup
+    dt_map=datetime.timedelta(minutes=timap)
+    #now for each run
+    tf_current=t0
+    tl_current=tf+ti
+    tinit=dt_spinup
+    t_all=[]
+    done=0
+    while done==0:
+        if (tl_current>=tl):
+            done=1
+            tl_current=tl
+        t_all.append([tf_current,tl_current,tinit])
+        tf_current=tl_current
+        month_current=int( tf_current.strftime("%m"))
+        year_current=int( tf_current.strftime("%Y"))
+        tblock = monthrange(year_current, month_current)[1]
+        print(month_current,year_current,tblock)
+        ti=datetime.timedelta(days=tblock)
+        tl_current=tl_current+ti
+        tinit=dt_map
+    return(t_all,tf)

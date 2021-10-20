@@ -72,7 +72,7 @@ def comparedatasets(TGstavec,TGtidvec,Mfstavec,Mftidvec,name):
     (nTGstavec,nTGtidvec)=snapTG(TGstavec,TGtidvec)
     diffamfmwf=(Mftidvec[:,0]-nTGtidvec[:,0])
     diffphfmwf=realphasediff(Mftidvec[:,1],nTGtidvec[:,1])
-    plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,-diffphfmwf,name)
+    plotdiff(nTGstavec[:,0],nTGstavec[:,1],diffamfmwf,diffphfmwf,name)
 
 def snapTG(TGstavec,TGtidvec):
 
@@ -92,7 +92,7 @@ def snapTG(TGstavec,TGtidvec):
     return(nTGstavec,nTGtidvec)
 
 #%%
-# all region.
+# all region. FES
 # compare the results with annual M2 from TG data. remember this data is yearly and it already has H1 and H2
 #TG data
 tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
@@ -108,3 +108,18 @@ comparedatasets(TGstavec,TGtidvec,Ftgstavec,Ftgtidvec,name)
 
 # %%
 
+# compare the results with annual M2 from TG data. remember this data is yearly and it already has H1 and H2
+#TG data
+tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
+(TGstavec,TGtidvec,TGstations)=readdata.readtgdata(tgfile,tideconst)
+
+
+## FES derived M2 for 154 tidal stations. As 2 stations are a bit inland in Regional and GTSM   
+modelncfile=os.path.join(path1,'postprocessing','annual','ncdata','Standardmodelannualgtsmb.nc')
+# fesncfile=os.path.join(path1,'postprocessing','annual','ncdata','FESTGannual_nonsnapped.nc')
+(Mgstavec,Mgtidvec)=readdata.readtidedata(modelncfile)
+name=tideconst+'_(Mod-TG)_annual'
+comparedatasets(TGstavec,TGtidvec,Mgstavec,Mgtidvec,name)
+
+
+# %%

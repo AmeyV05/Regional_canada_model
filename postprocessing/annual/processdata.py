@@ -36,8 +36,36 @@ name='FESTGannual_nonsnapped'
 readdata.createNC(M2AFtg,M2PFtg,festgdata['lon'],festgdata['lat'],name)
 print('done')
 # %%
+#reading canada model data.
+t_all,tf=readdata.timecomputations()
+# locindex=(406+np.linspace(0,742,743)).astype(int)
+locindex=(1149+np.linspace(0,153,154)).astype(int)
+hisfileloc=os.path.join(path1,'model_runs','cartesius_runs', 'annualruns','standardruns')
+
+for times in t_all[:]:
+    # times=t_all[0]
+    tiym=times[0].strftime("%Y%m")
+    if times[0]<tf:
+        tiym=tiym[0:4]+'01'
+        hisfile=os.path.join(hisfileloc,'canada_model_his_'+tiym+'.nc')
+        modelannualdata=readdata.readmodel(hisfile,locindex)
+        modelannualdata['time']=modelannualdata['time'][1:]
+        modelannualdata['h']=modelannualdata['h'][1:,:]
+    else:
+        #merging data for annual
+        hisfile=os.path.join(hisfileloc,'canada_model_his_'+tiym+'.nc')
+        hismonthlydata=readdata.readmodel(hisfile,locindex)
+        hismonthlydata['time']=hismonthlydata['time'][1:]
+        hismonthlydata['h']=hismonthlydata['h'][1:,:]
+        modelannualdata['h']=np.vstack((modelannualdata['h'],hismonthlydata['h']))
+        modelannualdata['time']=np.append(modelannualdata['time'],hismonthlydata['time'])
+
+
+(M2Aannual,M2Pannual,Mlon,Mlat)=tideanalysis.tidalanalysis(modelannualdata,tideconst)
+readdata.createNC(M2Aannual,M2Pannual,Mlon,Mlat,'Standardmodelannualgtsmb')
 
 
 
 
 
+# %%

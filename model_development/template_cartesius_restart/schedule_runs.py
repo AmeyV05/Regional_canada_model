@@ -30,12 +30,12 @@ from calendar import monthrange
 # deleting any model files.
 os.system('rm -rf model*')
 
-def runmodelcartesius(rundir,mdufile):
+def runmodelcartesius(rundir,mdufile,nodes):
     # if len(glob.glob(os.path.join(rundir,'*.dia')))==0:
     # command="cd "+rundir+"; ../dflowfm_linux64_binaries/bin/dflowfm_parallel.sh %d %s"%(ndom,templatefile)
     # print command
     # os.system(command)
-    command="cd "+rundir+"; sh run_cartesius_parallel.sh"
+    command="cd "+rundir+"; sh run_cartesius_parallel.sh %d"%(nodes)
     print (command)
     os.system(command)
     while not os.path.exists(os.path.join(rundir,'sim.done')):
@@ -46,14 +46,14 @@ def runmodelcartesius(rundir,mdufile):
     # os.system(command)
 
 
-def runpartitioncartesius(rundir,mdufile):
+def runpartitioncartesius(rundir,mdufile,nodes):
     #if len(glob.glob(os.path.join(rundir+"/output",'*.dia')))==0:
     # # command="cd "+rundir+"; ../dflowfm_linux64_binaries/bin/dflowfm_parallel.sh %d %s"%(ndom,templatefile)
     # # print command
     # # os.system(command)
         # subprocess.call(['sh', './run_hydrax.sh'])
         
-    command="cd "+rundir+"; sh run_partition_cartesius_parallel.sh"
+    command="cd "+rundir+"; sh run_partition_cartesius_parallel.sh %d"%(nodes)
     print (command)
     os.system(command)
         # # subprocess.call(['sh', './run_hydrax.sh'])
@@ -63,7 +63,8 @@ def runpartitioncartesius(rundir,mdufile):
         print "Python program sleeping until simulation is done."
         time.sleep(100)
 #default settings for this run
-ndom=240
+nodes=1
+ndom=24*nodes
 tstart='201301010000'
 tstop ='201312310000'
 tinit=7#time to start and ignore before tstart [days]
@@ -210,7 +211,7 @@ for times in t_all:
         #month for fastice.
         month=(times[0].strftime("%m"))            
         print(month)
-    mdufile="gtsm_model.mdu"
+    mdufile="canada_model.mdu"
     print "mdufile = "+mdufile
     for key in key_values.keys():
     	print "#"+str(idom)+"#" + key + " " +str(key_values[key])
@@ -244,20 +245,20 @@ for times in t_all:
 
     for d in os.listdir(bforcingdir):
         if bforcingtyp=='GTSM':
-            if d[25:27]==month:
-                lbcfile=d
-                print(d)
-                shutil.copy(os.path.join(bforcingdir,lbcfile),os.path.join(rundir,lbcfile))
-            elif d[26:28]==month:
-                rbcfile=d
-                print(d)
-                shutil.copy(os.path.join(bforcingdir,rbcfile),os.path.join(rundir,rbcfile))
-        elif bforcingtyp=='FES':
             if d[24:26]==month:
                 lbcfile=d
                 print(d)
                 shutil.copy(os.path.join(bforcingdir,lbcfile),os.path.join(rundir,lbcfile))
             elif d[25:27]==month:
+                rbcfile=d
+                print(d)
+                shutil.copy(os.path.join(bforcingdir,rbcfile),os.path.join(rundir,rbcfile))
+        elif bforcingtyp=='FES':
+            if d[23:25]==month:
+                rbcfile=d
+                print(d)
+                shutil.copy(os.path.join(bforcingdir,lbcfile),os.path.join(rundir,lbcfile))
+            elif d[24:26]==month:
                 rbcfile=d
                 print(d)
                 shutil.copy(os.path.join(bforcingdir,rbcfile),os.path.join(rundir,rbcfile))
@@ -272,7 +273,7 @@ for times in t_all:
 
     # #partitioning the grid`for the first time only.
     if times[0]<tf:
-        runpartitioncartesius(rundir,mdufile)
+        runpartitioncartesius(rundir,mdufile,nodes)
 
     while not os.path.exists(os.path.join(rundir,'sim.done')):
         print "Python program sleeping until simulation is done."
@@ -319,7 +320,7 @@ for times in t_all:
 
     #start the run  by submitting it to cluster.
                 # runmodelh6(rundir,mdufile)
-    runmodelcartesius(rundir,mdufile)
+    runmodelcartesius(rundir,mdufile,nodes)
 
 
 
