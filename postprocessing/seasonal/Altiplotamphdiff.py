@@ -30,7 +30,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -50, 50, 65), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.25,vmax=0.25,transform=ccrs.PlateCarree())
@@ -42,7 +42,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -50, 50, 65), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-100,vmax=100,transform=ccrs.PlateCarree())
@@ -62,7 +62,7 @@ def plotMSdiff(Lon,Lat,diffam,diffph,name):
     # title='M2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.2,vmax=0.2,transform=ccrs.PlateCarree())
@@ -74,7 +74,7 @@ def plotMSdiff(Lon,Lat,diffam,diffph,name):
     # title='M2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-50,vmax=50,transform=ccrs.PlateCarree())
@@ -161,7 +161,7 @@ comparedatasets(SMtgstavec,SMtgtidvecsep,Astavec,Atidvecsep,name)
 #TG
 
 AlttidvecMS=Atidvecmar-Atidvecsep
-name=tideconst+"_Alti_March-Sept"
+name=tideconst+"_Alti_March-Sept_crop"
 plotMSdiff(Astavec[:,0],Astavec[:,1],AlttidvecMS[:,0],AlttidvecMS[:,1],name)
 #%%
 # Model
@@ -174,4 +174,3 @@ FtgtidvecMS=Ftgtidvecmar-Ftgtidvecsep
 name=tideconst+'_Alti_FES_March-Sept'
 plotMSdiff(Ftgstavec[:,0],Ftgstavec[:,1],FtgtidvecMS[:,0],FtgtidvecMS[:,1],name)
 
-# %%

@@ -24,7 +24,9 @@ tideconst='M2'
 #defining the plot function.
 
 def plotdiff(Lon,Lat,diffam,diffph,name):
-    diffamrms = np.sqrt(np.mean(diffam**2))
+    # diffamrms = np.sqrt(np.mean(diffam**2))
+    diffammae = (np.mean(np.abs(diffam)))
+    diffamstd=np.std(diffam)
     fig=plt.figure(figsize=(20,14),frameon=True)
     cmap='seismic'
 
@@ -52,7 +54,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     cbar.ax.tick_params(labelsize=18)
 
     # ax.set_title(title)
-    fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' ) RMSE:'+'%.4f' % diffamrms+'m', fontsize=20,y=0.91)
+    fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' ) STD:'+'%.4f' % diffamstd+'m', fontsize=20,y=0.91)
     fname=os.path.join(path1,'postprocessing','annual','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
@@ -103,7 +105,7 @@ tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
 fesncfile=os.path.join(path1,'postprocessing','annual','ncdata','FESTGannual.nc')
 # fesncfile=os.path.join(path1,'postprocessing','annual','ncdata','FESTGannual_nonsnapped.nc')
 (Ftgstavec,Ftgtidvec)=readdata.readtidedata(fesncfile)
-name=tideconst+'_(FES-TG)_annual'
+name=tideconst+'_(FES-TG)_annual_MAE'
 comparedatasets(TGstavec,TGtidvec,Ftgstavec,Ftgtidvec,name)
 
 # %%
@@ -118,7 +120,7 @@ tgfile=os.path.join(path1,'bathymetry_checks','TGCHS_RC_M2.nc')
 modelncfile=os.path.join(path1,'postprocessing','annual','ncdata','Standardmodelannualgtsmb.nc')
 # fesncfile=os.path.join(path1,'postprocessing','annual','ncdata','FESTGannual_nonsnapped.nc')
 (Mgstavec,Mgtidvec)=readdata.readtidedata(modelncfile)
-name=tideconst+'_(Mod-TG)_annual'
+name=tideconst+'_(Mod-TG)_annual_MAE'
 comparedatasets(TGstavec,TGtidvec,Mgstavec,Mgtidvec,name)
 
 

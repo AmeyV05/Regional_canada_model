@@ -54,6 +54,11 @@ def plotamph(Lon,Lat,am,ph,name):
     fname=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','figures',name+'.jpg')
     fig.savefig(fname,dpi=300)
 
+def comparedatasets(Modstavec,Modtidvec,Obsstavec,Obstidvec,name):
+    (nModstavec,nObsstavec,nModtidvec,nObstidvec)=readdata.snapstations(Modstavec,Obsstavec,Modtidvec,Obstidvec,1e-3)
+    diffamfmwf=nModtidvec[:,0]-nObstidvec[:,0]
+    diffphfmwf=realphasediff(nModtidvec[:,1],nObstidvec[:,1])
+    plotamph(nObsstavec[:,0],nObsstavec[:,1],diffamfmwf,diffphfmwf,name)
 
 
 #%%
@@ -275,3 +280,16 @@ comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
 print('done')
 
 # %%
+#comparison viscosity and standard model diff with altimetry
+#Altimetry data
+altfile=os.path.join(path1,'Altimetry_vanInger','ModM2Arctic_altimetry.nc')
+month='March'
+(Astavec,Atidvecmar)=readdata.readmonthaltidata(altfile,month)
+month='Sept'
+(Astavec,Atidvecsep)=readdata.readmonthaltidata(altfile,month)
+
+#march -sept differences
+
+AlttidvecMS=Atidvecmar-Atidvecsep
+name=tideconst+"_Alti_March-Sept"
+plotMSdiff(Astavec[:,0],Astavec[:,1],AlttidvecMS[:,0],AlttidvecMS[:,1],name)

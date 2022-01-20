@@ -33,9 +33,11 @@ def doanimation(modeldata,obsdata,type,locindex,nframes):
     fig=plt.figure()
     # ax=plt.axes(xlim=(0,475),ylim=(-2,2))
     ax=plt.axes(xlim=(0,406),ylim=(-2,2))
-    line1,=ax.plot([],[],label='model')
+    line1,=ax.plot([],[],label='Model')
     line2,=ax.plot([],[],label=type)
     title=ax.set_title('Waterlevel on water boundary points at '+'')
+    ax.set_ylabel('Waterlevel (m)')
+    ax.set_xlabel('Boundary points')
     plt.legend()
 
     def init():
@@ -59,7 +61,7 @@ def doanimation(modeldata,obsdata,type,locindex,nframes):
 
     FFWriter=animation.FFMpegWriter(extra_args=['-vcodec', 'libx264'])
     anim=animation.FuncAnimation(fig,animate,init_func=init,frames=nframes,interval=30,blit=True)
-    anim.save('postprocessing/validation/test_boundary/'+type+'waterlevel_waterboundary.mp4',writer=FFWriter)
+    anim.save(path1+'postprocessing/validation/test_boundary/'+type+'waterlevel_waterboundary_new.mp4',writer=FFWriter)
 
 def plttiboundary(modeldata,obsdata,type,j,locindex):
     timeinstant=modeldata['time'][j]
@@ -77,7 +79,7 @@ def plttiboundary(modeldata,obsdata,type,j,locindex):
     plt.xlabel('Boundary points')
     plt.ylabel('Waterlevel (m)')
     plt.title('Waterlevel at water boundary points at '+str(timeinstant))
-    fig.savefig(path1+'postprocessing/validation/test_boundary/'+type+'waterlevel_water_all_boundary_'+str(j)+'.jpg')
+    fig.savefig(path1+'postprocessing/validation/test_boundary/'+type+'waterlevel_water_all_boundary_'+str(j)+'_new.jpg')
 
 def plttinstant(modeldata,obsdata,type,j):
     fig=plt.figure()
@@ -87,7 +89,7 @@ def plttinstant(modeldata,obsdata,type,j):
     plt.xlabel('Time')
     plt.ylabel('Waterlevel (m)')
     plt.title('Waterlevel at boundary point of'+str(j))
-    fig.savefig(path1+'postprocessing/validation/test_boundary/'+type+'waterlevel_water_boundary_pt'+str(j)+'.jpg')
+    fig.savefig(path1+'postprocessing/validation/test_boundary/'+type+'waterlevel_water_boundary_pt'+str(j)+'_new.jpg')
 
 #%%
 #reading files for data..

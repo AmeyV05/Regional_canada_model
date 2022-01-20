@@ -30,7 +30,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,vmin=-0.25,vmax=0.25,transform=ccrs.PlateCarree())
@@ -42,7 +42,7 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
     cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,vmin=-100,vmax=100,transform=ccrs.PlateCarree())
@@ -375,16 +375,14 @@ print('done')
 # With GTSM boundary. 
 # reading of the model results 
 #model gtsm
-modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2vis2gtsmb.nc')
+modelffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2vistest1000.nc')
 (Mfstavec,Mftidvec)=readdata.readtidedata(modelffile)
-
-name='Vis2ModelwGTSM-FES'
-comparedatasets(Mfstavec,Mftidvec,Fstavec,Ftidvec,name)
-
+modelwovisffile=os.path.join(path1,'postprocessing','sensitivity_tests','test_M2','ncdata','ModM2vistestStandard.nc')
+(SMfstavec,SMftidvec)=readdata.readtidedata(modelwovisffile)
 name='Vis2ModelwGTSM-GTSM'
-comparedatasets(Mfstavec,Mftidvec,Gstavec,Gtidvec,name)
+comparedatasets(SMfstavec,SMftidvec,Mfstavec,Mftidvec,name)
 
-name='Vis2ModelwGTSM-Altimetry'
-comparedatasets(Mfstavec,Mftidvec,Astavec,Atidvec,name)
+
 print('done')
 # %%
+

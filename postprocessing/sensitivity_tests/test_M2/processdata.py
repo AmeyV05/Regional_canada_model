@@ -178,4 +178,28 @@ modelgdata=readdata.readmodel(modelgfile,locindex)
 #tidla analysis and conversion to NC
 (M2AMg,M2PMg,Mglon,Mglat)=tideanalysis.tidalanalysis(modelgdata,tideconst)
 readdata.createNC(M2AMg,M2PMg,Mglon,Mglat,'ModM2vis2gtsmb')
+
+#%%
+#Standard model for vis test
+modelffile=os.path.join(path1,'model_development','Openda_models','test_vis','standard_model','output','canada_model_0000_his.nc')
+modelfdata=readdata.readmodel(modelffile,locindex)
+#tidla analysis and conversion to NC
+(M2AMf,M2PMf,Mflon,Mflat)=tideanalysis.tidalanalysis(modelfdata,tideconst)
+readdata.createNC(M2AMf,M2PMf,Mflon,Mflat,'ModM2vistestStandard')
+#%%
+#Standard model for vis test
+# locindex=(1149+np.linspace(0,153,154)).astype(int)
+modelffile=os.path.join(path1,'model_development','Openda_models','test_vis','HS_vismodel','output','canada_model_0000_his.nc')
+modelfdata=readdata.readmodel(modelffile,locindex)
+#tidla analysis and conversion to NC
+(M2AMf,M2PMf,Mflon,Mflat)=tideanalysis.tidalanalysis(modelfdata,tideconst)
+readdata.createNC(M2AMf,M2PMf,Mflon,Mflat,'ModM2vistest10000')
+# %%
+#Standard model for vis test
+# locindex=(1149+np.linspace(0,153,154)).astype(int)
+modelffile=os.path.join(path1,'model_development','Openda_models','test_vis','HS_vismodel','output','canada_model_0000_his.nc')
+modelfdata=readdata.readmodel(modelffile,locindex)
+#tidla analysis and conversion to NC
+(M2AMf,M2PMf,Mflon,Mflat)=tideanalysis.tidalanalysis(modelfdata,tideconst)
+readdata.createNC(M2AMf,M2PMf,Mflon,Mflat,'ModM2vistest1000')
 # %%

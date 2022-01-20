@@ -65,7 +65,7 @@ def plotMSdiff(Lon,Lat,diffam,diffph,name):
     ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
-    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='^',s=800,vmin=-0.2,vmax=0.2,transform=ccrs.PlateCarree())
+    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='^',s=800,vmin=-0.05,vmax=0.05,transform=ccrs.PlateCarree())
     cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
     cbar.set_label(cbarlabel, rotation=90, fontsize=18)
     cbar.ax.tick_params(labelsize=18)
