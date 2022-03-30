@@ -55,8 +55,9 @@ echo "cd $basedir" >>sbatch_$name.sh
 #singularity versions from p:\d-hydro\delft3dfm_containers\delft3dfm_2022.01
 # echo "runscript=/projects/0/einf220/AV/dflowfm_myversion/run_dflowfm_singularity_AV.sh" >>sbatch_$name.sh
 # echo "dfmoutputscript=/projects/0/einf220/AV/dflowfm_myversion/run_dfmoutput_singularity.sh" >>sbatch_$name.sh
-runscript=/projects/0/einf220/AV/dflowfm_myversion/run_dflowfm_singularity_AV.sh
-dfmoutputscript=/projects/0/einf220/AV/dflowfm_myversion/run_dfmoutput_singularity.sh
+# runscript=/projects/0/einf220/AV/dflowfm_myversion/run_dflowfm_singularity_AV.sh
+runscript=/projects/0/einf220/delft3dfm_containers/delft3dfm_2022.01/run_dflowfm_singularity.sh 
+# dfmoutputscript=/projects/0/einf220/AV/dflowfm_myversion/run_dfmoutput_singularity.sh
 echo "# load modules" >>sbatch_$name.sh
 echo "module load 2021" >>sbatch_$name.sh
 echo "module load intel/2021a" >>sbatch_$name.sh
@@ -66,10 +67,10 @@ echo "touch $basedir/sim.done" >>sbatch_$name.sh
 echo "while [! -f sim.done];do">>sbatch_$name.sh
 echo "sleep 1">>sbatch_$name.sh
 echo "done">>sbatch_$name.sh
-echo "Merging map files." >>sbatch_$name.sh
-#echo "sh ./run_mapmerge_cartesius.sh" >>sbatch_$name.sh
-echo "$dfmoutputscript mapmerge --listfile $mergefile">>sbatch_$name.sh
-echo "touch $basedir/merge.done">>sbatch_$name.sh
+# echo "Merging map files." >>sbatch_$name.sh
+# #echo "sh ./run_mapmerge_cartesius.sh" >>sbatch_$name.sh
+# echo "$dfmoutputscript mapmerge --listfile $mergefile">>sbatch_$name.sh
+# echo "touch $basedir/merge.done">>sbatch_$name.sh
 chmod +x sbatch_$name.sh
 export result=`sbatch ./sbatch_$name.sh `
 echo "sbatch --> $result"
