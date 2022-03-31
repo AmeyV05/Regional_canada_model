@@ -47,6 +47,7 @@ echo "set -e"
 echo "cd $basedir" >>sbatch_$name.sh
 echo "# load modules" >>sbatch_$name.sh
 echo "module load 2021" >>sbatch_$name.sh
+echo "module load 2021_Delft3D" >>sbatch_$name.sh 
 echo "module load intel/2021a" >>sbatch_$name.sh
 echo "module load Java/11.0.2 ">>sbatch_$name.sh
 echo "cd $basedir" >>sbatch_$name.sh

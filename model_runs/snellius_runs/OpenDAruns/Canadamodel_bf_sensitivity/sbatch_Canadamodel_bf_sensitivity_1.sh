@@ -8,6 +8,7 @@
 cd /home/vasulkar/einf220/AV/canada_model/OpenDAruns/Canadamodel_bf_sensitivity
 # load modules
 module load 2021
+module load 2021_Delft3D
 module load intel/2021a
 module load Java/11.0.2 
 cd /home/vasulkar/einf220/AV/canada_model/OpenDAruns/Canadamodel_bf_sensitivity
