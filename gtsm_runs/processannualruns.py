@@ -14,7 +14,7 @@ sys.path.append('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing
 import readdata
 import datetime
 from calendar import monthrange
-from postprocessing import readdata
+# from postprocessing import readdata
 
 
 
@@ -39,7 +39,8 @@ def writeheader(file,boundname,refdate):
 
 def createbc(time,tlenhisfile,h,tiym,refdate):
     # folder='gtsm_runs/allyearruns_2013/'
-    folder='allyearruns_2013/'
+    # folder='allyearruns_2013/'
+    folder='allyearruns_2020/bcfilesnewversion/'
     timemins=np.linspace(0,(len(time)-1)*10,tlenhisfile+1)  
     #create left boundary
     filename=folder+'gtsmwaterlevel_left_'+tiym+'.bc'
@@ -64,11 +65,13 @@ def createbc(time,tlenhisfile,h,tiym,refdate):
     nfileobj.close()
 
 #%%
-t_all,tf=readdata.timecomputations()
+tstart='202001010000'
+tstop ='202012310000'
+t_all,tf=readdata.timecomputations(tstart,tstop)
 
 #%% 
 
-for times in t_all:
+for times in t_all[:10]:
     # times=t_all[0] 
     tiym=times[0].strftime("%Y%m")
     if times[0]<tf:
@@ -80,7 +83,8 @@ for times in t_all:
     #when through main directory
     # file=os.path.join('gtsm_runs','allyearruns_2013','gtsm_model_his_'+tiym+'.nc')
     #when in jupyter lab
-    file=os.path.join('allyearruns_2013','gtsm_model_his_'+tiym+'.nc')
+    # file=os.path.join('allyearruns_2013','gtsm_model_his_'+tiym+'.nc')
+    file=os.path.join('allyearruns_2020','newversion','gtsm_model_his_'+tiym+'.nc')
     # locindex=(np.linspace(0,474,475)).astype(int)  #reading only boundary. 
     locindex=(np.linspace(0,405,406)).astype(int) 
     gtsmbdata=readdata.readmodel(file,locindex)
@@ -99,6 +103,6 @@ for times in t_all:
     tlenhisfile=int((tstop-tstart)*6) #per 10 mins so 6. 
 
 
-#   createbc(time,tlenhisfile,h,tiym,str(refdate))
+    createbc(time,tlenhisfile,h,tiym,str(refdate))
     print('boundary file created.')
 # %%

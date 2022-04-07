@@ -60,7 +60,8 @@ import math
 def rmscompute(hobs,hmod):
     #first remove the mean from hobs.
     hobsmean=hobs-hobs.mean()
-    MSE = np.square(np.subtract(hobsmean,hmod)).mean() 
+    hmodmean=hmod-hmod.mean()
+    MSE = np.square(np.subtract(hobsmean,hmodmean)).mean() 
     RMSE = math.sqrt(MSE)
     return(RMSE)
 
@@ -83,7 +84,8 @@ getncresample(smodelfdata,sfname)
 #%%
 
 #Standard model with SAL and TG and altimtry in his file.
-modelffile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','TGsalgtsmboundaryoutput','canada_model_0000_his.nc')
+# modelffile=os.path.join(path1,'model_runs','cartesius_runs','test_3rd_boundary_runs','TGsalgtsmboundaryoutput','canada_model_0000_his.nc')
+modelffile=os.path.join(path1,'model_runs','snellius_runs','bathymetrytestruns','standardmodelrun','canada_model_0000_his.nc')
 smodelcfdata=readdata.readmodel(modelffile,locindex)
 sfcname=os.path.join('ncdata','Standardmodelwcali15min.nc')
 getncresample(smodelcfdata,sfcname)
@@ -154,7 +156,7 @@ ax1.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
 
 feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1)
 ax1.add_feature(feature)
-scatter_opts = {'marker':'^','s':300,'cmap':'viridis','transform':ccrs.PlateCarree(),'alpha':1,'vmin':0.0,'vmax':3.5}
+scatter_opts = {'marker':'^','s':300,'cmap':'viridis','transform':ccrs.PlateCarree(),'alpha':1,'vmin':0.0,'vmax':1.0}
 cont=ax1.scatter(Lon,Lat,c=gebrmsevec,**scatter_opts)
 cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
 # plt.show()

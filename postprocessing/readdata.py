@@ -226,10 +226,9 @@ def selectlocs(stanamevec,statidvec,rstanamevec):
     return(seltidvec.T)
 
 # time computations
-def timecomputations():
+def timecomputations(tstart,tstop):
     ## Time vec computation.
-    tstart='201301010000'
-    tstop ='201312310000'
+
     tinit=7#time to start and ignore before tstart [days]
     timap=15*24*60. #increment between maps [minutes]
 
