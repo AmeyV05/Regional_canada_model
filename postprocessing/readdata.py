@@ -263,3 +263,42 @@ def timecomputations(tstart,tstop):
         tl_current=tl_current+ti
         tinit=dt_map
     return(t_all,tf)
+
+
+import math
+def rmscompute(hobs,hmod):
+    #first remove the mean from hobs.
+    hobsmean=hobs-hobs.mean()
+    hmodmean=hmod-hmod.mean()
+    MSE = np.square(np.subtract(hobsmean,hmodmean)).mean() 
+    RMSE = math.sqrt(MSE)
+    return(RMSE)
+
+def getrmsdata(hobsmat,hmodmat):
+    nstations=len(hobsmat[:,0])
+    rmsevec=[]
+    for i in range(nstations):
+        RMSE=rmscompute(hobsmat[i,:],hmodmat[i,:])
+        rmsevec=np.append(rmsevec,RMSE)
+    return(rmsevec)
+
+import pandas as pd
+def readnprocessobsdata(tgstafile,obsfolder):   
+    headerlist=["Lon","Lat","Name"]
+    df=pd.read_csv(tgstafile,delim_whitespace=True,names=headerlist,quotechar="'")
+    tstaposdata=np.vstack((df['Lon'],df['Lat'])).T
+    tstanamdata=np.array(df['Name'])
+    files=os.listdir(obsfolder)
+    headerlist=["Time","Waterlevel"]
+    for i in range(len(tstanamdata)):
+        tgfile=obsfolder+'/'+tstanamdata[i]+'.wl'
+        if i==0:
+            dftg=pd.read_csv(tgfile,delim_whitespace=True,names=headerlist,skiprows=1)
+            hmattg=dftg['Waterlevel']
+        else:
+            dftg=pd.read_csv(tgfile,delim_whitespace=True,names=headerlist,skiprows=1)
+            hmattg=np.vstack((hmattg,dftg['Waterlevel']))
+    #station data
+    Lonvec=df['Lon']
+    Latvec=df['Lat']
+    return(hmattg,Lonvec,Latvec)
