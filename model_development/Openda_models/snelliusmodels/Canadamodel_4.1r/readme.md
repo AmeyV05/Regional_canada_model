@@ -9,12 +9,14 @@ Now we have different bathymetry and bottom friction polygons which are based on
 
 Again, the idea is to optimize bathymetry first and then bottom friction. with 4.1 having bathymetry and 4.2 bf.
 
-In the runs a 4.1.* version tells different experiments with bathymetric bounds. Now after 10 and 20% changes we realise each parameter should have different parameter extreme bounds. 
-we choose the metric as:
+now after runs on 4.1 and 4.2 and also 5 versions. IT is seen that, 4 Tg were extremely inaccurate which could be due to inaccuracies
+in the wl computation from gtsm. (the grid might be on land or cutcells issue)
 
-if a parameter sens is 8-16--> 20%
-2-8--> 10%
-0-2--> 5%.
+So, we have a reduced version 'r''with 4.1r for bathymetry only.
+
+Further, with 40% limits we converge to a nice distribution of parameter values which are optimal. changing limits doesn't affect the conversion.
+
+And so does changin the outer iterations.
 
 
 

@@ -23,6 +23,9 @@ from postprocessing import readdata, tideanalysis
 import matplotlib.pyplot as plt
 import cartopy.crs as ccrs
 import cartopy.feature as cpf
+from pathlib import Path
+import scipy.spatial.distance as sdist
+
 
 month='Sep'
 
@@ -113,9 +116,9 @@ ds.to_netcdf(fname)
 
 #%% read the optimized output.
 runsfolder=os.path.join(path1,'model_runs','snellius_runs','OpenDAruns','2020runs')
-simulationame='Canadamodel_5r.1'
+simulationame='Canadamodel_v1.1'
 CFfname='CF_'+simulationame+'.jpg'
-optworkdir=str(38)
+optworkdir=str(18)
 simfolder=runsfolder+'/'+simulationame+'/'
 optmodelfolder=simfolder+'stochModel/work'+optworkdir+'/'
 #reading the optimal results.
@@ -193,54 +196,19 @@ def plotrmsediff(modrmse1,modrmse2,Lonvec,Latvec,fname):
 # fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEGTSMv4.1_Sepr.jpg')
 # plotrmse(gtsmrmsevec,Lonvec,Latvec,fname)
 #OPT plot
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEOPT_5r.1Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEOPT_v1.1Sep.jpg')
 plotrmse(optrmsevec,Lonvec,Latvec,fname)
 # %%
 #difference plots.
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-OPT_5r.1_Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-OPT_v1.1_Sep.jpg')
 plotrmsediff(fesrmsevec,optrmsevec,Lonvec,Latvec,fname)
 # %%
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffGTSM4.1-OPT_5r.1_Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffGTSM4.1-OPT_8v1.1_Sep.jpg')
 plotrmsediff(gtsmrmsevec,optrmsevec,Lonvec,Latvec,fname)
 # # #difference plots.
 # fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-GTSM4.1_Sepr.jpg')
 # plotrmsediff(fesrmsevec,gtsmrmsevec,Lonvec,Latvec,fname)
-# %% plot time series of all tg and save the fig,.
-import seaborn as sns
-sns.set_theme("notebook")
-#plot time series.
-def plottimeseries(hobs,hmod,label,fname):
-    fig=plt.figure(figsize=(6,2))
-    plt.plot(hobs,'r--',label='Obs')
-    plt.plot(hmod,'b',label=label)
-    plt.legend()
-    plt.savefig(fname,dpi=300)
-def plotalltimeseries(folder,hobs,hmod,label,tstanamdata):
-    for i in range(len(tstanamdata)):
-        tgname=tstanamdata[i]
-        hobsi=hobs[i,:]-hobs[i,:].mean()
-        hmodi=hmod[:,i]
-        fname=os.path.join(path1,'postprocessing','calibration','figures',folder,tgname+'.jpg')
-        plottimeseries(hobsi,hmodi,label,fname)
-#%%
-headerlist=["Lon","Lat","Name"]
-df=pd.read_csv(tgstafile,delim_whitespace=True,names=headerlist,quotechar="'")
-tstanamdata=np.array(df['Name'])
 
-#%%
-#plot fes time series.
-folder='FESTimeSeriesSep'
-label='FES'
-plotalltimeseries(folder,hobs,hfes,label,tstanamdata)
-#%%
-folder='GTSMv4.1TimeSeriesSep'
-labelg='GTSMv4.1'
-plotalltimeseries(folder,hobs,hgtsm,labelg,tstanamdata)
-  
-# %%
-folder='Opt5.2TimeSeriesSep'
-labelo='Opt5.2'
-plotalltimeseries(folder,hobs,hopt,labelo,tstanamdata)
 # %%
 # testing cost function from rmse.
 cfopt=np.sum(optrmsevec**2)
@@ -249,4 +217,3 @@ cfgtsm=np.sum(gtsmrmsevec**2)
 rindex=np.array([121,128,49,31]).astype(int)
 optrmsevec2=np.delete(optrmsevec,rindex)
 cfopt2=np.sum(optrmsevec2**2)
-# %%
