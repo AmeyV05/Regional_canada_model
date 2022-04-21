@@ -86,5 +86,5 @@ output1
 *.noo
 machinefile
 *.sh
-
+*.stat
 
