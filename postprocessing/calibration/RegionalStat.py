@@ -130,18 +130,18 @@ regional_tg_pos=np.vstack((cdf.Lon.values,cdf.Lat.values)).T
 #%%
 
 runsfolder=os.path.join(path1,'model_runs','snellius_runs','OpenDAruns','2020runs')
-simulationame='Canadamodel_v1.1'
+simulationame='Canadamodel_v1.3'
 CFfname='CF_'+simulationame+'.jpg'
-optworkdir=str(18)
+optworkdir=str(17)
 simfolder=runsfolder+'/'+simulationame+'/'
 optmodelfolder=simfolder+'stochModel/work'+optworkdir+'/'
 #reading the optimal results.
 optmoddata=xr.open_dataset(optmodelfolder+'output/canada_model_0000_his.nc')
 hopt=optmoddata['waterlevel'][1:,:] 
 optrmsevec=readdata.getrmsdata(hobs,hopt.T)
-foldername='Optv1.1TimeSeriesSep'
-label='Optv1.1'
-# plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hopt)
+foldername='Optv1.3TimeSeriesSep'
+label='Optv1.3'
+plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hopt)
 # read fes and GTSM4.1 output
 #%%
 #gtsm data
@@ -217,7 +217,7 @@ def plotregionaltg(region_name,stanamdata,rtglon,rtglat,fname,rmsvec):
     
 
 # %%
-foldername='Optv1.1TimeSeriesSep'
+foldername='Optv1.3TimeSeriesSep'
 hmod=hopt
 computeandplotstat(hobs,hmod,foldername)
 

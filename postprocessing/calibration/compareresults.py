@@ -116,9 +116,9 @@ ds.to_netcdf(fname)
 
 #%% read the optimized output.
 runsfolder=os.path.join(path1,'model_runs','snellius_runs','OpenDAruns','2020runs')
-simulationame='Canadamodel_v1.1'
+simulationame='Canadamodel_v1.3'
 CFfname='CF_'+simulationame+'.jpg'
-optworkdir=str(18)
+optworkdir=str(17)
 simfolder=runsfolder+'/'+simulationame+'/'
 optmodelfolder=simfolder+'stochModel/work'+optworkdir+'/'
 #reading the optimal results.
@@ -196,14 +196,14 @@ def plotrmsediff(modrmse1,modrmse2,Lonvec,Latvec,fname):
 # fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEGTSMv4.1_Sepr.jpg')
 # plotrmse(gtsmrmsevec,Lonvec,Latvec,fname)
 #OPT plot
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEOPT_v1.1Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEOPT_v1.3Sep.jpg')
 plotrmse(optrmsevec,Lonvec,Latvec,fname)
 # %%
 #difference plots.
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-OPT_v1.1_Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-OPT_v1.3_Sep.jpg')
 plotrmsediff(fesrmsevec,optrmsevec,Lonvec,Latvec,fname)
 # %%
-fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffGTSM4.1-OPT_8v1.1_Sep.jpg')
+fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffGTSM4.1-OPT_8v1.3_Sep.jpg')
 plotrmsediff(gtsmrmsevec,optrmsevec,Lonvec,Latvec,fname)
 # # #difference plots.
 # fname=os.path.join(path1,'postprocessing','calibration','figures','RMSEdiffFES-GTSM4.1_Sepr.jpg')
