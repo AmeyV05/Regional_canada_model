@@ -169,6 +169,13 @@ comparedatasets(TGstavec,TGtidvecmar,SMtgstavec,SMtgtidvecmar,name)
 name=tideconst+'_(Smod-TG)_sept'
 comparedatasets(TGstavec,TGtidvecsep,SMtgstavec,SMtgtidvecsep,name)
 
+#%%
+omodncfilemar=os.path.join(path1,'postprocessing','seasonal','ncdata','TGOptmodel_march_gtsmb.nc')
+(OMtgstavec,OMtgtidvecmar)=readdata.readtidedata(omodncfilemar)
+omodncfilesep=os.path.join(path1,'postprocessing','seasonal','ncdata','TGOptmodel_sept_gtsmb.nc')
+(OMtgstavec,OMtgtidvecsep)=readdata.readtidedata(omodncfilesep)
+
+
 # %%
 #march -sept differences
 #TG
@@ -187,5 +194,10 @@ plotMSdiff(nTGstavec[:,0],nTGstavec[:,1],SMtgtidvecMS[:,0],SMtgtidvecMS[:,1],nam
 FtgtidvecMS=Ftgtidvecmar-Ftgtidvecsep
 name=tideconst+'_FES_March-Sept'
 plotMSdiff(nTGstavec[:,0],nTGstavec[:,1],FtgtidvecMS[:,0],FtgtidvecMS[:,1],name)
+
+# %%
+OMtgtidvecMS=OMtgtidvecmar-OMtgtidvecsep
+name=tideconst+'_OptModel_March-Sept'
+plotMSdiff(nTGstavec[:,0],nTGstavec[:,1],OMtgtidvecMS[:,0],OMtgtidvecMS[:,1],name)
 
 # %%

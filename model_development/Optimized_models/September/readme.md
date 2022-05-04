@@ -1,0 +1,1 @@
+This includes a calibrated september version of the model. It is from Canadamodel_9_combined_final.3. which had the lowest csot functuon

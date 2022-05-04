@@ -26,7 +26,7 @@ import scipy.spatial.distance as sdist
 import seaborn as sns
 sns.set_theme("notebook")
 
-month='Sep'
+month='Mar'
 
 
 #%% function defintions
@@ -108,13 +108,20 @@ def plotallregionaltimeseries(label,regnamdf,regional_tg_pos,tstaposdata,hobs,tg
 #%%#first step is readin obs.
 # tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_1/stochModel/input_model/TGObs_Sep.xyn' #file which has obs on wet cells in canada model.
 #second file with only 150 Tg not 154.
-tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_4.1r/stochModel/input_model/TGObs_Sep.xyn'
+#tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_4.1r/stochModel/input_model/TGObs_Sep.xyn'
+# tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_8r_2/stochModel/input_model/TGObs_Sep.xyn'
+if month=='Sep':
+    tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_9_combined_final/stochModel/input_model/TGObs_Sep.xyn'
+    obsfolder=os.path.join(path1,'model_development','Openda_models','Observations','CHSTG','Sept_All')
+else:
+    tgstafile='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/snelliusmodels/Canadamodel_march_2/stochModel/input_model/TGObs_Mar.xyn'
+    obsfolder=os.path.join(path1,'model_development','Openda_models','Observations','CHSTG','March_All')
 # Reading the tg name data
 headerlist=["Lon","Lat","Name"]
 df=pd.read_csv(tgstafile,delim_whitespace=True,names=headerlist,quotechar="'")
 tstanamdata=np.array(df['Name'])
 #TG obs from the obs folder.
-obsfolder=os.path.join(path1,'model_development','Openda_models','Observations','CHSTG','Sept_All')
+
 (hobs,Lonvec,Latvec)=readdata.readnprocessobsdata(tgstafile,obsfolder)
 tstaposdata=np.vstack((Lonvec,Latvec)).T
 regional_name_file='/u/vasulkar/p_emodnet_amey/Regional_canada_model/model_development/Openda_models/Parameters/canada_subdivision/RegionDescription.csv'
@@ -130,23 +137,25 @@ regional_tg_pos=np.vstack((cdf.Lon.values,cdf.Lat.values)).T
 #%%
 
 runsfolder=os.path.join(path1,'model_runs','snellius_runs','OpenDAruns','2020runs')
-simulationame='Canadamodel_v1.3'
+simulationame='Canadamodel_march_2.1'
 CFfname='CF_'+simulationame+'.jpg'
-optworkdir=str(17)
+optworkdir=str(48)
 simfolder=runsfolder+'/'+simulationame+'/'
 optmodelfolder=simfolder+'stochModel/work'+optworkdir+'/'
 #reading the optimal results.
 optmoddata=xr.open_dataset(optmodelfolder+'output/canada_model_0000_his.nc')
 hopt=optmoddata['waterlevel'][1:,:] 
 optrmsevec=readdata.getrmsdata(hobs,hopt.T)
-foldername='Optv1.3TimeSeriesSep'
-label='Optv1.3'
-plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hopt)
+foldername='OptMarch2.1TimeSeriesMar' 
+label='OptMarch2.1'
+# plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hopt)
 # read fes and GTSM4.1 output
 #%%
 #gtsm data
 #removing the 4 TG.
 rindex=np.array([121,128,49,31]).astype(int) 
+indexarray=np.array([44,124,88,111,19,133,54,78,22,73,77,99,66,46,30,98,23,92,74,33,47,105,122,153,123,134,140,131,144,110,141,113,29]).astype(int)
+rindex=np.append(rindex,indexarray)
 gtsmdata=xr.open_dataset('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing/calibration/ncdata/GTSMTG15min_Sep.nc')
 hgtsm=gtsmdata['H']
 hgtsm=np.delete(hgtsm,rindex,axis=1)
@@ -155,10 +164,10 @@ label='GTSMv4.1'
 # plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hgtsm)
 
 # %% fes data reading and getting rmse
-fesdata=xr.open_dataset('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing/calibration/ncdata/FESTG15min_Sep.nc')
+fesdata=xr.open_dataset('/u/vasulkar/p_emodnet_amey/Regional_canada_model/postprocessing/calibration/ncdata/FESTG15min_'+month+'.nc')
 hfes=fesdata['H']
 hfes=np.delete(hfes,rindex,axis=1)
-foldername='FESTimeSeriesSep'
+foldername='FESTimeSeries'+month
 label='FES'
 # plotallregionaltimeseries(label,rdf,regional_tg_pos,tstaposdata,hobs,tgidvec,tstanamdata,foldername,hfes)
 
@@ -217,14 +226,14 @@ def plotregionaltg(region_name,stanamdata,rtglon,rtglat,fname,rmsvec):
     
 
 # %%
-foldername='Optv1.3TimeSeriesSep'
+foldername='OptMarch2.1TimeSeriesMar'
 hmod=hopt
 computeandplotstat(hobs,hmod,foldername)
 
 #%%
-foldername='FESTimeSeriesSep'
+foldername='FESTimeSeries'+month
 computeandplotstat(hobs,hfes,foldername)
-# %%
-foldername='GTSMv4.1TimeSeriesSep'
-computeandplotstat(hobs,hgtsm,foldername)
+# # %%
+# foldername='GTSMv4.1TimeSeriesSep'
+# computeandplotstat(hobs,hgtsm,foldername)
 # %%

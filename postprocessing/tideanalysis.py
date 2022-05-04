@@ -70,8 +70,8 @@ def tidalanalysis(data,tideconst):
 
 def compute1stationtidal(data,tideconst):
     # const=['K1','O1','Q1', 'P1','N2','M2','S2','K2','H2','H1'] # for yearly
-    # const=['K1','O1','Q1', 'P1','N2','M2','S2','K2']
-    const=constlist
+    const=['K1','O1','Q1', 'P1','N2','M2','S2','K2']
+    # const=constlist
     epoch1='1970-01-01'
     tidalconst=tideconst
     time=data['time']

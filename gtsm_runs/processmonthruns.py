@@ -77,9 +77,12 @@ for times in t_all:
     if times[0]<tf:
         tiym=tiym[0:4]+'01'
     timo=times[0].strftime("%m")
-    if timo=='09':
+    if timo=='03':
         #spin up period:
-        days=8
+        #sept
+        #days=8
+        # march
+        days=7 
         timindex=int(days*24*6) #6 because our data is every 10mins.
         ## readin boundary and creating the .bc file.
         #when through main directory

@@ -30,10 +30,10 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-100, -50, 50, 65), crs=ccrs.PlateCarree())
+    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
-    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.25,vmax=0.25,transform=ccrs.PlateCarree())
+    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.25,vmax=0.25,transform=ccrs.PlateCarree(),s=100)
     cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
     cbar.set_label(cbarlabel, rotation=90, fontsize=18)
     cbar.ax.tick_params(labelsize=18)
@@ -42,10 +42,10 @@ def plotdiff(Lon,Lat,diffam,diffph,name):
     # title='M2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-100, -50, 50, 65), crs=ccrs.PlateCarree())
+    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
-    cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-100,vmax=100,transform=ccrs.PlateCarree())
+    cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-100,vmax=100,transform=ccrs.PlateCarree(),s=100)
     cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
     cbar.set_label(cbarlabel, rotation=90, fontsize=18) 
     cbar.ax.tick_params(labelsize=18)
@@ -62,26 +62,28 @@ def plotMSdiff(Lon,Lat,diffam,diffph,name):
     # title='M2amp'
     cbarlabel='Amplitude(m)'
     ax=fig.add_subplot(1,2,1,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
-    feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
-    ax.add_feature(feature)
-    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.2,vmax=0.2,transform=ccrs.PlateCarree())
+    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
+
+    cont=plt.scatter(Lon,Lat,c=diffam,cmap=cmap,marker='o',vmin=-0.25,vmax=0.25,transform=ccrs.PlateCarree(),s=100)
     cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
     cbar.set_label(cbarlabel, rotation=90, fontsize=18)
     cbar.ax.tick_params(labelsize=18)
+    feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
+    ax.add_feature(feature)
     # Phase subplot
     level=50.
     # title='M2ph'
     cbarlabel='Phase(deg)'
     ax=fig.add_subplot(1,2,2,projection=ccrs.NorthPolarStereo(central_longitude=0.0,true_scale_latitude=None, globe=None)) 
-    ax.set_extent((-100, -60, 50, 63), crs=ccrs.PlateCarree())
+    ax.set_extent((-158, -47, 49, 84), crs=ccrs.PlateCarree())
     feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
     ax.add_feature(feature)
-    cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-50,vmax=50,transform=ccrs.PlateCarree())
+    cont=plt.scatter(Lon,Lat,c=diffph,cmap=cmap,marker='o',vmin=-50,vmax=50,transform=ccrs.PlateCarree(),s=100)
     cbar=fig.colorbar(cont,fraction=0.078, pad=0.04)
     cbar.set_label(cbarlabel, rotation=90, fontsize=18) 
     cbar.ax.tick_params(labelsize=18)
-
+    feature=cpf.GSHHSFeature(scale='i',levels=[1],facecolor='black',alpha=1,edgecolor='none')
+    ax.add_feature(feature)
     # ax.set_title(title)
     fig.suptitle('Difference of '+tideconst+'amp and phase ('+name+' )', fontsize=20,y=0.91)
     fname=os.path.join(path1,'postprocessing','seasonal','figures',name+'.jpg')
@@ -141,11 +143,12 @@ comparedatasets(Ftgstavec,Ftgtidvecsep,Astavec,Atidvecsep,name)
 
 # %%
 
-## Standard model derived M2 for 154 tidal stations. As 2 stations are a bit inland in Regional and GTSM
+## Standard model derived M2 altimetry
 #march
    
 smodncfilemar=os.path.join(path1,'postprocessing','seasonal','ncdata','AltiStandardmodel201303gtsmb.nc')
 (SMtgstavec,SMtgtidvecmar)=readdata.readtidedata(smodncfilemar)
+#sep
 smodncfilesep=os.path.join(path1,'postprocessing','seasonal','ncdata','AltiStandardmodel201309gtsmb.nc')
 (SMtgstavec,SMtgtidvecsep)=readdata.readtidedata(smodncfilesep)
 
@@ -158,10 +161,10 @@ comparedatasets(SMtgstavec,SMtgtidvecsep,Astavec,Atidvecsep,name)
 
 # %%
 #march -sept differences
-#TG
+#Altimetry
 
 AlttidvecMS=Atidvecmar-Atidvecsep
-name=tideconst+"_Alti_March-Sept_crop"
+name=tideconst+"_Alti_March-Sept"
 plotMSdiff(Astavec[:,0],Astavec[:,1],AlttidvecMS[:,0],AlttidvecMS[:,1],name)
 #%%
 # Model
@@ -174,3 +177,23 @@ FtgtidvecMS=Ftgtidvecmar-Ftgtidvecsep
 name=tideconst+'_Alti_FES_March-Sept'
 plotMSdiff(Ftgstavec[:,0],Ftgstavec[:,1],FtgtidvecMS[:,0],FtgtidvecMS[:,1],name)
 
+#%% optimized model march sept differnece.
+#sep
+omodncfilesep=os.path.join(path1,'postprocessing','seasonal','ncdata','AltiOptmodel_sep_all_gtsmb.nc')
+(OMaltistavec,OMaltitidvecsep)=readdata.readtidedata(omodncfilesep)
+# sep difference
+name=tideconst+'_(Omod-Alti)_sept'
+# comparedatasets(OMaltistavec,OMaltitidvecsep,Astavec,Atidvecsep,name)
+#march
+omodncfilemar=os.path.join(path1,'postprocessing','seasonal','ncdata','AltiOptmodel_mar_all_gtsmb.nc')
+(OMaltistavec,OMaltitidvecmar)=readdata.readtidedata(omodncfilemar)
+# sep difference
+name=tideconst+'_(Omod-Alti)_mar'
+# comparedatasets(OMaltistavec,OMaltitidvecmar,Astavec,Atidvecmar,name)
+
+#%%
+#March-Sept diference
+OMAlttidvecMS=OMaltitidvecmar-OMaltitidvecsep
+name=tideconst+'_Alti_Opt_March-Sept'
+plotMSdiff(OMaltistavec[:,0],OMaltistavec[:,1],OMAlttidvecMS[:,0],OMAlttidvecMS[:,1],name)
+# %%

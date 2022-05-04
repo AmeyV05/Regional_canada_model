@@ -44,8 +44,8 @@ dir_modelrun = dir_obsoriginal
 file_ldb = os.path.join(dir_modelrun,'world.ldb')
 identifier = os.path.basename(dir_modelrun).split('_')[1] #eg '1500m'
 # obspointfile_list = ['CMEMS_stations.xyn','sealevel_obs_hawaii_2.xyn']
-obspointfile_list = ['CHSTG.xyn']
-
+#obspointfile_list = ['CHSTG.xyn']
+obspointfile_list = ['TG_Altimetry_boundary_obs.xyn']
 def xlonylat2xyzcartesian(data):
     """
     necessary to calculate cartesian distances, otherwise nearest neigbour can fail.

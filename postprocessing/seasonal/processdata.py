@@ -68,11 +68,11 @@ createmonthlydata(tstart,tend,festgdata,name)
 
 
 # %%
-# Standard canada model TG computations. 
+# Standard canada model TG computations from annual runs.
 #reading canada model data.
 t_all,tf=readdata.timecomputations()
 # locindex=(406+np.linspace(0,742,743)).astype(int)
-locindex=(1149+np.linspace(0,153,154)).astype(int)
+# locindex=(1149+np.linspace(0,153,154)).astype(int)
 hisfileloc=os.path.join(path1,'model_runs','cartesius_runs', 'annualruns','standardruns')
 
 for times in t_all[:]:
@@ -121,4 +121,16 @@ for times in t_all[:]:
         modelannualdata['h']=modelannualdata['h']
         (M2Aannual,M2Pannual,Mlon,Mlat)=tideanalysis.tidalanalysis(modelannualdata,tideconst)
         readdata.createNC(M2Aannual,M2Pannual,Mlon,Mlat,'AltiStandardmodel'+tiym+'gtsmb')
+# %%
+#here we use the optimized model runs for mnarch and september and do the tidal analysis.
+# locindex=(406+np.linspace(0,674,675)).astype(int) #snapped obs
+locindex=(406+np.linspace(0,742,743)).astype(int)
+# locindex=(1149+np.linspace(0,153,154)).astype(int)
+hisfileloc=os.path.join(path1,'model_runs','snellius_runs', 'optmodel_september')
+hisfile=os.path.join(hisfileloc,'canada_model_0000_his.nc')
+modelannualdata=readdata.readmodel(hisfile,locindex)
+modelannualdata['time']=modelannualdata['time']
+modelannualdata['h']=modelannualdata['h']
+(M2Aannual,M2Pannual,Mlon,Mlat)=tideanalysis.tidalanalysis(modelannualdata,tideconst)
+readdata.createNC(M2Aannual,M2Pannual,Mlon,Mlat,'AltiOptmodel_sep_all_gtsmb')
 # %%
